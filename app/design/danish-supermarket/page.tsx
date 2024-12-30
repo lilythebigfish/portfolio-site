@@ -62,7 +62,9 @@ export default function Design1() {
             {/* Article Section */}
             <article className="flex-grow mx-52 pt-36">
                 <Header title="Context" />
-                <Body content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+                <Body content="In January 2023, Irma, the staple supermarket in Denmark, announced that it would close all its stores. 
+                For centuries, the Danes treasured the Irma girl and the supermarket's design initiatives, but its sales was eventually was outcompeted by new discount markets.
+                In order to fill in the gap Irma left, we were to design a new brand that solves a modern Danish supermarket problem." />
                 <Image
                     src="/images/book.jpg"
                     layout="responsive"
@@ -71,7 +73,79 @@ export default function Design1() {
                     alt="Article Image"
                     className="my-8"
                 />
+                <Header title="The Problem" />
+                <Body content="After conducting research and brainstorming, I identified the key problem in supermarket shopping that I wanted to solve: " />
+                <strong><Body content="How should we reduce shoppes' decision paralysis caused by overstimulation?" /></strong>
+                <Body content="My simple answer to that question is: reduced choices + minimalistic design!" />
+
+                <Header title="Logo" />
+                <Body content="The
+                    name “Njordic” comes from Njord, the nordic god of the sea and
+                    navigation, embodying Njordic’s dedication to navigating customers
+                    through a sea of grocery choices. This is achieved by providing only
+                    the highest quality products in store and employing minimalistic
+                    design principles." />
+
+
+                <Header title="Identity Statement" />
+                <Image
+                    src="/images/book.jpg"
+                    layout="responsive"
+                    width={800}
+                    height={500}
+                    alt="Article Image"
+                    className="my-8"
+                />
+
+                <Header title="Style" />
+                <Image
+                    src="/images/book.jpg"
+                    layout="responsive"
+                    width={800}
+                    height={500}
+                    alt="Article Image"
+                    className="my-8"
+                />
+
+                <Header title="Deliverables" />
+                <Image
+                    src="/images/book.jpg"
+                    layout="responsive"
+                    width={800}
+                    height={500}
+                    alt="Posters"
+                    className="my-8"
+                />
+
+                <Image
+                    src="/images/book.jpg"
+                    layout="responsive"
+                    width={800}
+                    height={500}
+                    alt="Products"
+                    className="my-8"
+                />
+
+                <Image
+                    src="/images/book.jpg"
+                    layout="responsive"
+                    width={800}
+                    height={500}
+                    alt="Website"
+                    className="my-8"
+                />
+
+                <Image
+                    src="/images/book.jpg"
+                    layout="responsive"
+                    width={800}
+                    height={500}
+                    alt="Shopping bag"
+                    className="my-8"
+                />
+
             </article>
+
             {/* Navigation */}
             <div className="flex flex-row justify-center space-x-24 mx-20 my-8 pb-8">
                 <Image src="/svgs/back.svg" width={75} height={60} alt="back Icon" className="bottom-0" />
