@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { Header, Body } from "@/app/project-components";
 import { ProjectLanding, Project } from "@/app/project-components";
@@ -10,7 +11,7 @@ const ProjectPage = () => {
         title: "Janice, Fashion Shopping Chatbot",
         description: "Proposed and designed the full UX for a chatbot app that advises users on style options and facilitates their fashion shopping.",
         design: true,
-        image: "/design/janice.png",
+        image: "/design/janice-cover.png",
         role: "UX Designer",
         date: "Jan - Apr 2024",
         tools: (
@@ -25,6 +26,7 @@ const ProjectPage = () => {
                 <li>Shina Y</li>
             </ul>
         ),
+        next: "/design/njordic-supermarket"
     });
 
     return (
@@ -40,153 +42,132 @@ const ProjectPage = () => {
                 They have a lot developed chatbot-related functionalities, but they want to make an entertaining and lucrative app for the US market.
                 Our team took on the task to come up with a suitable app for Social Future and design the full UX for it."
                 />
-                
+
                 <Header title="Research" />
 
                 <Body content="We researched the current usages for AI chatbots, and categorized the market opportunities for new chatbots into: 
-                creative (e.g. role-playing for character development and art/writing inspiration), learning (e.g. text-analysis and language learning), and niche (e.g. banking bot and law knowledge). 
-                After looking at the pros and cons for these categories, we decided that the niche category was the best direction to go into."
+                creative (e.g. character simulation), learning (e.g. chatbot &quot;teachers&quot;), and niche (e.g. legaal consulting). 
+                After looking at the pros and cons for these categories, we decided that the creative category was the best direction to go into."
                 />
 
-                {/* image of pro and con */}
+                <Image
+                    src="/design/pro-con.jpg"
+                    layout="responsive"
+                    width={0}
+                    height={0}
+                    alt="Book Cover"
+                    className="my-8"
+                />
 
                 <Header title="Brainstorm" />
 
                 <Body content="My teammate and I each brainstormed some app ideas, and we settled on making a fashion shopping chatbot because it caters to a specific audience (female and young) and the technology is easy to implement from Social Future's existing functionalities."
                 />
-                
-                <div className="flex flex-row justify-between">
-                    <Image
-                        src="/design/idea1"
-                        alt="Example Image"
-                        layout="intrinsic"
-                        width={100}
-                        height={0}
-                        className="my-4"
-                    />
-                    <Image
-                        src="/design/idea2"
-                        alt="Example Image"
-                        layout="intrinsic"
-                        width={100}
-                        height={0}
-                        className="my-4"
-                    />
-                    <Image
-                        src="/design/idea3"
-                        alt="Example Image"
-                        layout="intrinsic"
-                        width={100}
-                        height={0}
-                        className="my-4"
-                    />
-                    <Image
-                        src="/design/idea4"
-                        alt="Example Image"
-                        layout="intrinsic"
-                        width={100}
-                        height={0}
-                        className="my-4"
-                    />
-                    <Image
-                        src="/design/idea5"
-                        alt="Example Image"
-                        layout="intrinsic"
-                        width={100}
-                        height={0}
-                        className="my-4"
-                    />
-                </div>
 
-                <Header title="User Flow" />
-
-                <div className="flex justify-center items-center">
-                    <Image
-                        src="/design/irma.jpg"
-                        alt="Example Image"
-                        layout="intrinsic"
-                        width={600}
-                        height={0}
-                        className="my-4"
-                    />
-                </div>
-                
-                <Header title="Colors" />
-                
                 <Image
-                    src="/design/njordic-logo.png"
+                    src="/design/janice-ideas.png"
                     layout="responsive"
                     width={0}
                     height={0}
-                    objectFit="cover" 
-                    objectPosition="center"
                     alt="Book Cover"
+                    className="my-8"
+                />
+
+                <Header title="User Flow" />
+
+                <Image
+                    src="/design/janice-flow.png"
+                    layout="responsive"
+                    width={0}
+                    height={0}
+                    alt="Book Cover"
+                    className="my-8"
                 />
 
                 <Header title="Final Design" />
 
-                <div className="flex flex-row justify-between">
-                    <Image
-                        src="/design/janice.png"
-                        alt="Example Image"
-                        layout="intrinsic"
-                        width={100}
-                        height={0}
-                        className="my-4"
-                    />
-                    <Image
-                        src="/design/Intro.gif"
-                        alt="Example Image"
-                        layout="intrinsic"
-                        width={100}
-                        height={0}
-                        className="my-4"
-                    />
+                <div className="flex flex-row space-x-3 w-full ">
+                    <div className="flex">
+                        <Image
+                            src="/design/janice.png"
+                            alt="Example Image"
+                            layout="responsive"
+                            width={0}
+                            height={0}
+                            className="my-4"
+                        />
+                    </div>
+                    <div className="flex-0.5 bg-white">
+                        <Image
+                            src="/design/Intro.gif"
+                            alt="Example Image"
+                            layout="responsive"
+                            width={0}
+                            height={0}
+                            className="my-4"
+                        />
+                    </div>
                 </div>
 
-                <Body content="Style Recommendation"/>
+                <Header title="Onboarding" />
+
+                <Image
+                    src="/design/janice-onboard.png"
+                    layout="responsive"
+                    width={0}
+                    height={0}
+                    objectFit="cover"
+                    objectPosition="center"
+                    alt="Book Cover"
+                />
+
+                <Header title="Style Recommendation" />
 
                 <div className="flex justify-center items-center">
                     <Image
                         src="/design/chat.gif"
                         alt="Example Image"
                         layout="intrinsic"
-                        width={100}
+                        width={300}
                         height={0}
                         className="my-4"
                     />
                 </div>
 
-                <Body content="Profile and Wishlist"/>
+                <Header title="Profile and Wishlist" />
 
                 <div className="flex justify-center items-center">
                     <Image
-                        src="/design/Profile.jpg"
+                        src="/design/Profile.gif"
                         alt="Example Image"
                         layout="intrinsic"
-                        width={100}
+                        width={300}
                         height={0}
                         className="my-4"
                     />
                 </div>
-                
+
             </article>
 
             {/* Navigation Section */}
-            <div className="flex flex-row justify-center space-x-24 mx-20 my-8 pb-8">
-                <Image
-                    src="/svgs/back.svg"
-                    width={75}
-                    height={60}
-                    alt="Back Icon"
-                    className="bottom-0"
-                />
-                <Image
-                    src="/svgs/next.svg"
-                    width={80}
-                    height={60}
-                    alt="Next Icon"
-                />
+            <div className="flex flex-row justify-center space-x-24 mx-20 my-12">
+                <Link href="/design/wet-and-orange">
+                    <Image
+                        src="/svgs/back.svg"
+                        width={75}
+                        height={60}
+                        alt="Back Icon"
+                        className="bottom-0"
+                    />
+                </Link>
+                <Link href="/design/njordic-supermarket">
+                    <Image
+                        src="/svgs/next.svg"
+                        width={80}
+                        height={60}
+                        alt="Next Icon"
+                    />
+                </Link>
             </div>
         </div>
     );

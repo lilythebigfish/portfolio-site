@@ -23,7 +23,7 @@ export function Navbar() {
       </a>
       <div className="flex space-x-10">
         <Link href={"https://medium.com/@lilylinthoughts"} target="_blank">Blog</Link>
-        <Link href={"https://drive.google.com/file/d/1aBKZL5hkGn810pM8ihgGF9pQ1jaOxMOq/view?usp=sharing"} target="_blank">CV</Link>
+        <Link href={"https://docs.google.com/document/d/11T7-AnpF1AxztrH9SLzjaVVp4UHLPhWz/edit?usp=sharing&ouid=108107892836613563663&rtpof=true&sd=true"} target="_blank">CV</Link>
       </div>
     </div>
   );

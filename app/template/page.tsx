@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { Header, Body } from "@/app/project-components";
 import { ProjectLanding, Project } from "@/app/project-components";
@@ -10,7 +11,7 @@ const ProjectPage = () => {
         title: "Project Title",
         description: "Developer",
         design: true,
-        image: "/images/stretch-graphite.JPG", // Adjusted path
+        image: "/images/stretch-graphite.JPG",
         role: "Artist",
         date: "Date here",
         tools: (
@@ -26,6 +27,7 @@ const ProjectPage = () => {
             </ul>
         ),
         medium: "Acrylic on Canvas",
+        next: "f"
     });
 
     return (
@@ -38,7 +40,7 @@ const ProjectPage = () => {
                 <Header title="Context" />
 
                 <Body content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
-                
+
                 {/* small image */}
                 <div className="flex justify-center items-center">
                     <Image
@@ -50,34 +52,37 @@ const ProjectPage = () => {
                         className="my-4"
                     />
                 </div>
-                
+
                 {/* large image */}
                 <Image
                     src="/design/njordic-logo.png"
                     layout="responsive"
                     width={0}
                     height={0}
-                    objectFit="cover" 
-                    objectPosition="center"
                     alt="Book Cover"
+                    className="my-8"
                 />
             </article>
 
             {/* Navigation Section */}
             <div className="flex flex-row justify-center space-x-24 mx-20 my-8 pb-8">
-                <Image
-                    src="/svgs/back.svg"
-                    width={75}
-                    height={60}
-                    alt="Back Icon"
-                    className="bottom-0"
-                />
-                <Image
-                    src="/svgs/next.svg"
-                    width={80}
-                    height={60}
-                    alt="Next Icon"
-                />
+                <Link href="">
+                    <Image
+                        src="/svgs/back.svg"
+                        width={75}
+                        height={60}
+                        alt="Back Icon"
+                        className="bottom-0"
+                    />
+                </Link>
+                <Link href="">
+                    <Image
+                        src="/svgs/next.svg"
+                        width={80}
+                        height={60}
+                        alt="Next Icon"
+                    />
+                </Link>
             </div>
         </div>
     );

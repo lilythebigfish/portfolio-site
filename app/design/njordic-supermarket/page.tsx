@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { Header, Body } from "@/app/project-components";
 import { ProjectLanding, Project } from "@/app/project-components";
@@ -20,6 +21,7 @@ const ProjectPage = () => {
                 <li>Figma</li>
             </ul>
         ),
+        next: "/design/wet-and-orange"
     });
 
     return (
@@ -49,25 +51,25 @@ const ProjectPage = () => {
                     <strong> How should we reduce shopper&apos;s decision paralysis caused by overstimulation? </strong></>} />
 
                 <Image
-                src="/design/njordic-sketches.png"
-                layout="responsive"
-                width={0}
-                height={0}
-                objectFit="cover"
-                objectPosition="center"
-                alt="sketches"
+                    src="/design/njordic-sketches.png"
+                    layout="responsive"
+                    width={0}
+                    height={0}
+                    objectFit="cover"
+                    objectPosition="center"
+                    alt="sketches"
                 />
-                
-                <Header title="Personna Study" />  
+
+                <Header title="Personna Study" />
 
                 <Image
-                src="/design/njordic-personna.jpg"
-                layout="responsive"
-                width={0}
-                height={0}
-                objectFit="cover"
-                objectPosition="center"
-                alt="sketches"
+                    src="/design/njordic-personna.jpg"
+                    layout="responsive"
+                    width={0}
+                    height={0}
+                    objectFit="cover"
+                    objectPosition="center"
+                    alt="sketches"
                 />
 
                 <Header title="Logo" />
@@ -89,8 +91,8 @@ const ProjectPage = () => {
                     alt="Book Cover"
                 />
 
-                <Header title="Identity Statement" /> 
-        
+                <Header title="Identity Statement" />
+
                 <Image
                     src="/design/njordic-message.png"
                     layout="responsive"
@@ -151,19 +153,14 @@ const ProjectPage = () => {
 
             {/* Navigation Section */}
             <div className="flex flex-row justify-center space-x-24 mx-20 my-8 pb-8">
-                <Image
-                    src="/svgs/back.svg"
-                    width={75}
-                    height={60}
-                    alt="Back Icon"
-                    className="bottom-0"
-                />
-                <Image
-                    src="/svgs/next.svg"
-                    width={80}
-                    height={60}
-                    alt="Next Icon"
-                />
+                <Link href="/design/wet-and-orange">
+                    <Image
+                        src="/svgs/next.svg"
+                        width={80}
+                        height={60}
+                        alt="Next Icon"
+                    />
+                </Link>
             </div>
         </div>
     );
