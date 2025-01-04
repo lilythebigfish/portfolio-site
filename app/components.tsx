@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image"
-import { ReactNode, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 
 export function Display() { 
@@ -35,36 +35,15 @@ export function Gallery() {
         msOverflowStyle: "none",
       }}>
         <div className="pt-36 space-y-3">
-          <Link href="/design/design1">
-            <Image src="/images/book.jpg" width={1} height={1} layout="responsive" alt="" className="object-cover rounded-sm" />
+          <Link href="/design/njordic-supermarket">
+            <Image src="/design/njordic-cover.jpg" width={1} height={1} fill alt="" className="object-cover rounded-sm" />
             <div>
-              <p className="font-semibold">Once Upon a Wet & Orange Day</p>
-              <p className= "text-sm">Book Design</p>
+              <p className="font-semibold">Njordic Supermarket</p>
+              <p className= "text-sm">Brand Design</p>
             </div>
           </Link>
         </div>
         <div className="pt-36 space-y-3">
-          <Image src="/images/book.jpg" width={1} height={1} layout="responsive" alt="" className="object-cover rounded-sm" />
-          <div>
-            <p className="font-semibold">Once Upon a Wet & Orange Day</p>
-            <p className= "text-sm">Book Design</p>
-          </div>
-        </div>
-        <div className="space-y-3">
-          <Image src="/images/book.jpg" width={1} height={1} layout="responsive" alt="" className="object-cover rounded-sm" />
-          <div>
-            <p className="font-semibold">Once Upon a Wet & Orange Day</p>
-            <p className= "text-sm">Book Design</p>
-          </div>
-        </div>
-        <div className="space-y-3">
-          <Image src="/images/book.jpg" width={1} height={1} layout="responsive" alt="" className="object-cover rounded-sm" />
-          <div>
-            <p className="font-semibold">Once Upon a Wet & Orange Day</p>
-            <p className= "text-sm">Book Design</p>
-          </div>
-        </div>
-        <div className="space-y-3 pb-10">
           <Image src="/images/book.jpg" width={1} height={1} layout="responsive" alt="" className="object-cover rounded-sm" />
           <div>
             <p className="font-semibold">Once Upon a Wet & Orange Day</p>
@@ -80,11 +59,11 @@ export function Gallery() {
         msOverflowStyle: "none",
       }}>
         <div className="pt-36 space-y-3">
-          <Link href="/art/art1">
-            <Image src="/images/book.jpg" width={1} height={1} layout="responsive" alt="" className="object-cover rounded-sm" />
+          <Link href="/art/stretch">
+            <Image src="/art/stretch-pastel.JPG" width={1} height={1} layout="responsive" alt="" className="object-cover rounded-sm" />
             <div>
-              <p className="font-semibold">My Art Project</p>
-              <p className= "text-sm">Book Design</p>
+              <p className="font-semibold">Stretch</p>
+              <p className= "text-sm">Drawing</p>
             </div>
           </Link>
         </div>
@@ -128,17 +107,5 @@ export function Gallery() {
           }`}/> </button>
       </div>
     </div>
-  )
-}
-
-export function Header({ title }: { title: string }) { 
-  return (
-      <h1 className="text-3xl pb-6 font-medium">{title}</h1>
-  )
-}
-
-export function Body({ content }: {content: ReactNode}) { 
-  return (
-      <p className="text-md pb-6"> {content}</p>
   )
 }
