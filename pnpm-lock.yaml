@@ -8,8 +8,11 @@ importers:
 
   .:
     dependencies:
+      fastq:
+        specifier: ^1.18.0
+        version: 1.18.0
       next:
-        specifier: 15.1.2
+        specifier: ^15.1.2
         version: 15.1.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
         specifier: ^19.0.0
