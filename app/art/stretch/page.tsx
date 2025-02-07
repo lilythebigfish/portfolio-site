@@ -23,7 +23,7 @@ const ProjectPage = () => {
             {/* Article Section */}
             <article className="flex-grow mx-52 pt-36 snap-start">
                 <Image
-                    src="/art/stretch-graphite.jpg"
+                    src="/art/stretch-graphite.JPG"
                     layout="responsive"
                     width={800}
                     height={500}
@@ -34,7 +34,7 @@ const ProjectPage = () => {
                 <Body content="" />
 
                 <Image
-                    src="/art/stretch-pastel.jpg"
+                    src="/art/stretch-pastel.JPG"
                     layout="responsive"
                     width={800}
                     height={500}
