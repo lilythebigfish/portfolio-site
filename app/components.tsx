@@ -18,7 +18,7 @@ export function Blurb() {
         <Image src="/svgs/design.svg" width={125} height={0} alt="" className="inline-block align-middle mx-3 -mt-[3px]" />
         TO SOLVE OTHER PEOPLE&apos;S PROBLEMS AND MAKE 
         <Image src="/svgs/art.svg" width={70} height={0} alt="" className="inline-block align-middle mx-3 -mt-[3px]" />
-         ART TO SOLVE MY OWN PROBLEM. WHAT I CAN&apos;T SOLVE I PUT INTO
+         TO SOLVE MY OWN PROBLEM. WHAT I CAN&apos;T SOLVE I PUT INTO
         <Image src="/svgs/words.svg" width={125} height={0} alt="" className="inline-block align-middle mx-3 -mt-[3px]" />. </p>
     </div>
   )
