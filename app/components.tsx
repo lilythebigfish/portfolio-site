@@ -14,11 +14,11 @@ export function Display() {
 export function Blurb() {
   return (
     <div className="flex flex-col justify-end h-screen pb-10">
-      <p className="text-justify text-4xl"><strong>VISUAL DESIGNER AND ARTIST BASED IN NEW HAVEN AND BEIJING.</strong> I MAKE
-        <Image src="/svgs/art.svg" width={70} height={0} alt="" className="inline-block align-middle mx-3 -mt-[3px]" />
-        TO SOLVE OTHER PEOPLE&apos;S PROBLEMS AND
+      <p className="text-justify text-4xl"><strong>VISUAL DESIGNER AND ARTIST BASED IN NEW HAVEN AND BEIJING.</strong> I
         <Image src="/svgs/design.svg" width={125} height={0} alt="" className="inline-block align-middle mx-3 -mt-[3px]" />
-        TO SOLVE MY OWN PROBLEMS. WHAT I CAN&apos;T SOLVE I PUT INTO
+        TO SOLVE OTHER PEOPLE&apos;S PROBLEMS AND MAKE 
+        <Image src="/svgs/art.svg" width={70} height={0} alt="" className="inline-block align-middle mx-3 -mt-[3px]" />
+         ART TO SOLVE MY OWN PROBLEM. WHAT I CAN&apos;T SOLVE I PUT INTO
         <Image src="/svgs/words.svg" width={125} height={0} alt="" className="inline-block align-middle mx-3 -mt-[3px]" />. </p>
     </div>
   )
