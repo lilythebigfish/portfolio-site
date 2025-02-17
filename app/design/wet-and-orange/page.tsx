@@ -51,7 +51,7 @@ const ProjectPage = () => {
 
                 <div className="flex justify-center items-center">
                     <Image
-                        src="/design/book_plan.jpg"
+                        src="/design/book_plan.JPG"
                         alt="Book Plan"
                         layout="intrinsic"
                         width={600}
