@@ -38,9 +38,24 @@ export function Gallery() {
           msOverflowStyle: "none", // For IE
         }}
       >
-        {/* Two-column Pinterest-style layout */}
         <div className="columns-2 gap-8 space-y-4 pt-24">
           {/* Individual Items */}
+          <div className="break-inside-avoid">
+            <Link href="/art/flowers">
+              <Image
+                src="/art/flowers-1.JPG"
+                width={500}
+                height={400}
+                layout="responsive"
+                alt="Flowers"
+                className="object-cover rounded-sm"
+              />
+              <div>
+                <p className="font-semibold pt-2">When Flowers Die, Will Love Die Too?</p>
+                <p className="text-sm">Painting</p>
+              </div>
+            </Link>
+          </div>
           <div className="break-inside-avoid">
             <Link href="/art/stretch">
               <Image
@@ -168,7 +183,6 @@ export function Gallery() {
           msOverflowStyle: "none", // For IE
         }}
       >
-        {/* Two-column Pinterest-style layout */}
         <div className="columns-2 gap-8 space-y-4 pt-24">
           {/* Individual Items */}
           <div className="break-inside-avoid">
@@ -190,7 +204,7 @@ export function Gallery() {
           <div className="break-inside-avoid">
             <Link href="/design/wet-and-orange">
               <Image
-                src="/design/book.jpg"
+                src="/design/book_holding.jpg"
                 width={400}
                 height={300}
                 layout="responsive"

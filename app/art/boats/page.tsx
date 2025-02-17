@@ -12,7 +12,7 @@ const ProjectPage = () => {
         image: "/art/day.jpg",
         date: "Jun 2021",
         medium: "Oil Pastel on Paper",
-        next: "/art/stretch"
+        next: "/art/flowers"
     });
 
     return (
@@ -54,7 +54,7 @@ const ProjectPage = () => {
                         className="bottom-0"
                     />
                 </Link>
-                <Link href="/art/stretch">
+                <Link href="/art/flowers">
                     <Image
                         src="/svgs/next.svg"
                         width={80}

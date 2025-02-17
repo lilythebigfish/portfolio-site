@@ -11,7 +11,7 @@ const ProjectPage = () => {
         title: "Once Upon a Wet and Orange Day",
         description: "Final project for my class Introduction to Graphic Design. Zine made from a collection of photos I took over 3 month's time.",
         design: true,
-        image: "/design/book.jpg",
+        image: "/design/book_holding.jpg",
         role: "Graphic Designer",
         date: "Apr 2024",
         tools: (
@@ -47,71 +47,61 @@ const ProjectPage = () => {
 
                 <Header title="Layout Planning" />
                 <Body content="I decided to structure my photo book by matching pairs of photos with visual similarities, ordering them from most apparent connection to most discreet.
-                I also inserted full-spread images if a photos had an interesting texture I wanted to highlight." />
+                I also inserted full-spread images if a photos had an interesting texture I wanted to highlight. To experiment with book and image size in real form, I created 5 different dummies before settling on my final product." />
 
-                {/* image of sketchbook with order */}
+                <div className="flex justify-center items-center">
+                    <Image
+                        src="/design/book_plan.jpg"
+                        alt="Book Plan"
+                        layout="intrinsic"
+                        width={600}
+                        height={0}
+                        className="my-4"
+                    />
+                </div>
+
+                <Image
+                    src="/design/book_dummies.jpg"
+                    layout="responsive"
+                    width={0}
+                    height={0}
+                    alt="Book dummies"
+                    className="my-8"
+                />
 
                 {/* image of dummies */}
 
-                <Header title="Final Product" />
+                <Header title="Execution" />
 
-                <Body content="For the book material, I decided to bind a thin pvc sheet over the cover to add shine and reflection to give the illusion of wetness. 
+                <Body content="Concerning the material of my book, I bound a thin PVC sheet over an orange cardstock to add shine and reflection to give the illusion of wetness. 
                 I printed the book pages on shiny paper for the same effect. For the title font, I chose Highway Gothic, the font used on roadsigns to allude to orange warning signs on a rainy day." />
 
                 {/* large image */}
                 <Image
-                    src="/design/book.jpg"
+                    src="/design/book_innercover.jpg"
                     layout="responsive"
                     width={0}
                     height={0}
-                    alt="Book Cover"
+                    alt="Book Inner Cover"
                     className="my-8"
                 />
 
-                <Image
-                    src="/design/Book2.JPG"
-                    layout="responsive"
-                    width={0}
-                    height={0}
-                    alt="Book Cover"
-                    className="my-8"
-                />
-                <Body content="" />
-                <Image
-                    src="/design/Book3.JPG"
-                    layout="responsive"
-                    width={0}
-                    height={0}
-                    objectFit="cover"
-                    objectPosition="center"
-                    alt="Book Cover"
-                />
-                <Body content="" />
-                <Image
-                    src="/design/Book4.JPG"
-                    layout="responsive"
-                    width={0}
-                    height={0}
-                    objectFit="cover"
-                    objectPosition="center"
-                    alt="Book Cover"
-                />
-                <Body content="" />
-                <Image
-                    src="/design/Book5.JPG"
-                    layout="responsive"
-                    width={0}
-                    height={0}
-                    objectFit="cover"
-                    objectPosition="center"
-                    alt="Book Cover"
-                />
-                <Body content="" />
-                <Body content="I hand-bound the zine by separating it into 5 signatures, each with 4 pages. 
+                <Body content="I saddle-stitched the zine with orange thread, separating the zine into 5 8-page signatures. 
                 This way, I was able to maximize the amount of spreads that can be opened flat since there are many full-bleed images in my zine."/>
 
                 <Image
-                    src="/design/Book6.JPG"
+                    src="/design/book_side.jpg"
+                    layout="responsive"
+                    width={0}
+                    height={0}
+                    alt="Book Cover"
+                    className="my-8"
+                />
+
+                <Header title="Final Product: Selected Pages" />
+
+                <Image
+                    src="/design/book_cover.jpg"
                     layout="responsive"
                     width={0}
                     height={0}
@@ -119,6 +109,63 @@ const ProjectPage = () => {
                     objectPosition="center"
                     alt="Book Cover"
                 />
+
+                <Body content="" />
+                
+                <Image
+                    src="/design/book_p1.jpg"
+                    layout="responsive"
+                    width={0}
+                    height={0}
+                    objectFit="cover"
+                    objectPosition="center"
+                    alt="Book Cover"
+                />
+                <Body content="" />
+                <Image
+                    src="/design/book_p2.jpg"
+                    layout="responsive"
+                    width={0}
+                    height={0}
+                    objectFit="cover"
+                    objectPosition="center"
+                    alt="Book Cover"
+                />
+                <Body content="" />
+
+                <Image
+                    src="/design/book_p3.jpg"
+                    layout="responsive"
+                    width={0}
+                    height={0}
+                    objectFit="cover"
+                    objectPosition="center"
+                    alt="Book Cover"
+                />
+                <Body content="" />
+
+                <Image
+                    src="/design/book_p4.jpg"
+                    layout="responsive"
+                    width={0}
+                    height={0}
+                    objectFit="cover"
+                    objectPosition="center"
+                    alt="Book Cover"
+                />
+                <Body content="" />
+
+                <Image
+                    src="/design/book_end.jpg"
+                    layout="responsive"
+                    width={0}
+                    height={0}
+                    objectFit="cover"
+                    objectPosition="center"
+                    alt="Book Cover"
+                />
+                <Body content="" />
+
 
             </article>
 

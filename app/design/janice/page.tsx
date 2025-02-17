@@ -86,25 +86,23 @@ const ProjectPage = () => {
 
                 <Header title="Final Design" />
 
-                <div className="flex flex-row space-x-3 w-full ">
-                    <div className="flex">
+                <div className="flex flex-row space-x-3 justify-center w-full ">
+                    <div className="flex h-[600px] w-auto">
                         <Image
                             src="/design/janice.png"
                             alt="Example Image"
-                            layout="responsive"
-                            width={0}
-                            height={0}
-                            className="my-4"
+                            width={400}
+                            height={600} // Fixed height for consistency
+                            className="my-4 object-contain"
                         />
                     </div>
-                    <div className="flex-0.5 bg-white">
+                    <div className="flex h-[600px] w-auto">
                         <Image
-                            src="/design/Intro.gif"
+                            src="/design/janice_onboarding.gif"
                             alt="Example Image"
-                            layout="responsive"
-                            width={0}
-                            height={0}
-                            className="my-4"
+                            width={400}
+                            height={600} // Same fixed height as the first image
+                            className="my-4 object-contain"
                         />
                     </div>
                 </div>

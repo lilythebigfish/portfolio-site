@@ -7,7 +7,7 @@ import { Body, ProjectLanding, Project } from "@/app/project-components";
 const ProjectPage = () => {
     const [project] = useState<Project>({
         title: "The Embrace",
-        description: "The transformation process of a new version of me replacing the last as I continue to absorb new experiences and knowledge in order to grow.",
+        description: "The transformation process of a new version of me replacing the last as I continue to absorb new experiences and knowledge to grow in my adolescence.",
         design: false,
         image: "/art/embrace-1.png",
         date: "Jun 2022",
@@ -23,34 +23,42 @@ const ProjectPage = () => {
             {/* Article Section */}
             <article className="flex-grow mx-52 pt-36 snap-start">
 
-                <Image
-                    src="/art/embrace-1.png"
-                    layout="responsive"
-                    width={800}
-                    height={500}
-                    alt="Article Image"
-                    className="my-8"
-                />
+                <div className="flex justify-center items-center">
+                    <Image
+                        src="/art/embrace-1.png"
+                        alt="Example Image"
+                        layout="intrinsic"
+                        width={600}
+                        height={0}
+                        className="mb-8"
+                    />
+                </div>
 
-                <Body content="Tiles emphasize the self-reflective nature intended by this piece, and the gentle farewell-embrace depicts me thanking the ways the previous me enriched the present. The hole in the middle shows how the new me is not completely formed yet and will continue to be there as I constantly undergo transformation." />
+                <Body content="The mirror-tiles emphasize the reflective nature of this piece, and the gentle embrace depicts me giving gratitude to the ways my younger-self enriched my present-self. 
+                The hole in the middle of the torso shows how the new me is not a closed form and will continue to morph as I undergo the transformative journey of adolescence." />
 
-                <Image
-                    src="/art/embrace-2.png"
-                    layout="responsive"
-                    width={800}
-                    height={500}
-                    alt="Article Image"
-                    className="my-8"
-                />
+                <div className="flex justify-center items-center">
+                    <Image
+                        src="/art/embrace-2.png"
+                        alt="Example Image"
+                        layout="intrinsic"
+                        width={600}
+                        height={0}
+                        className="my-4"
+                    />
+                </div>
 
-                <Image
-                    src="/art/embrace-3.png"
-                    layout="responsive"
-                    width={800}
-                    height={500}
-                    alt="Article Image"
-                    className="my-8"
-                />
+                <div className="flex justify-center items-center">
+                    <Image
+                        src="/art/embrace-3.png"
+                        alt="Example Image"
+                        layout="intrinsic"
+                        width={600}
+                        height={0}
+                        className="my-4"
+                    />
+                </div>
+
             </article>
 
             {/* Navigation Section */}
