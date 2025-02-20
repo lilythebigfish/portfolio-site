@@ -83,13 +83,15 @@ export function Blurb() {
           />
         </span>
         TO SOLVE MY OWN PROBLEM. WHAT I CAN&apos;T SOLVE I PUT INTO
-        <Image
-          src="/svgs/words.svg"
-          width={125}
-          height={0}
-          alt=""
-          className="inline-block align-middle mx-3 -mt-[3px]"
-        />
+        <a href="https://medium.com/@lilylinthoughts" target="_blank">
+          <Image
+            src="/svgs/words.svg"
+            width={125}
+            height={0}
+            alt=""
+            className="inline-block align-middle mx-3 -mt-[3px]"
+          />
+        </a>
         .{" "}
       </p>
     </div>
