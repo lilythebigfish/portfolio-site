@@ -194,7 +194,7 @@ export function Gallery() {
             </Link>
           </div>
           <div className="break-inside-avoid">
-            <Link href="/art/contemporary-still-lif">
+            <Link href="/art/contemporary-still-life">
               <Image
                 src="/art/still-life.jpg"
                 width={300}
