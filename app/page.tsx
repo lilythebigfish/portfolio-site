@@ -117,7 +117,7 @@ export function Footer() {
     <footer className="text-gray-600 body-font mx-20 snap-end border-t">
       <div className="flex items-center py-10 sm:flex-row flex-col w-full">
         <p className="text-sm text-gray-500 sm:py-2 sm:mt-0 mt-4">
-          {new Date().getFullYear()} Lily Lin — Built with Next.js
+          Copyright &copy {new Date().getFullYear()} Lily Lin — Built with Next.js
         </p>
         <span className="inline-flex ml-auto justify-center sm:justify-end text-gray-500">
           {/* Mail */}
