@@ -1,38 +1,121 @@
 "use client";
-import Image from "next/image"
+import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
+
+import { useEffect } from "react";
+
+declare global {
+  interface Window {
+    __nextGalleryComponent?: {
+      setActiveGallery: (gallery: string) => void;
+    };
+  }
+}
 
 export function Display() {
   return (
     <div className="flex items-center justify-center h-screen">
-      <Image src="/images/peter.png" width={300} height={200} alt="sme and peter" />
+      <Image
+        src="/images/peter.png"
+        width={300}
+        height={200}
+        alt="sme and peter"
+      />
     </div>
-  )
+  );
 }
 
 export function Blurb() {
+  // Handler for design icon click
+  const handleDesignClick = () => {
+    // Get gallery element
+    const galleryElement = document.querySelector(".snap-start.snap-always");
+
+    // Set active gallery to design before scrolling
+    if (window.__nextGalleryComponent?.setActiveGallery) {
+      window.__nextGalleryComponent.setActiveGallery("design");
+    }
+
+    // Scroll to gallery
+    if (galleryElement) {
+      galleryElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  // Handler for art icon click
+  const handleArtClick = () => {
+    // Get gallery element
+    if (window.__nextGalleryComponent?.setActiveGallery) {
+      window.__nextGalleryComponent.setActiveGallery("art");
+    }
+
+    const galleryElement = document.querySelector(".snap-start.snap-always");
+    if (galleryElement) {
+      galleryElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="flex flex-col justify-end h-screen pb-10">
-      <p className="text-justify text-4xl"><strong>VISUAL DESIGNER AND ARTIST BASED IN NEW HAVEN AND BEIJING.</strong> I
-        <Image src="/svgs/design.svg" width={125} height={0} alt="" className="inline-block align-middle mx-3 -mt-[3px]" />
-        TO SOLVE OTHER PEOPLE&apos;S PROBLEMS AND MAKE 
-        <Image src="/svgs/art.svg" width={70} height={0} alt="" className="inline-block align-middle mx-3 -mt-[3px]" />
-         TO SOLVE MY OWN PROBLEM. WHAT I CAN&apos;T SOLVE I PUT INTO
-        <Image src="/svgs/words.svg" width={125} height={0} alt="" className="inline-block align-middle mx-3 -mt-[3px]" />. </p>
+      <p className="text-justify text-4xl">
+        <strong>
+          VISUAL DESIGNER AND ARTIST BASED IN NEW HAVEN AND BEIJING.
+        </strong>{" "}
+        I
+        <span onClick={handleDesignClick} className="cursor-pointer">
+          <Image
+            src="/svgs/design.svg"
+            width={125}
+            height={0}
+            alt=""
+            className="inline-block align-middle mx-3 -mt-[3px]"
+          />
+        </span>
+        TO SOLVE OTHER PEOPLE&apos;S PROBLEMS AND MAKE
+        <span onClick={handleArtClick} className="cursor-pointer">
+          <Image
+            src="/svgs/art.svg"
+            width={70}
+            height={0}
+            alt=""
+            className="inline-block align-middle mx-3 -mt-[3px]"
+          />
+        </span>
+        TO SOLVE MY OWN PROBLEM. WHAT I CAN&apos;T SOLVE I PUT INTO
+        <Image
+          src="/svgs/words.svg"
+          width={125}
+          height={0}
+          alt=""
+          className="inline-block align-middle mx-3 -mt-[3px]"
+        />
+        .{" "}
+      </p>
     </div>
-  )
+  );
 }
 
 export function Gallery() {
   const [activeGallery, setActiveGallery] = useState("art");
-  return (
-    <div className="h-screen flex snap-start snap-always mx-20">
 
+  useEffect(() => {
+    window.__nextGalleryComponent = { setActiveGallery };
+    return () => {
+      delete window.__nextGalleryComponent;
+    };
+  }, []);
+
+  return (
+    <div
+      className="h-screen flex snap-start snap-always mx-20"
+      id="gallery-section"
+    >
       {/* art gallery */}
       <div
-        className={`w-3/4 pb-10 overflow-y-auto ${activeGallery === "art" ? "block" : "hidden"
-          }`}
+        className={`w-3/4 pb-10 overflow-y-auto ${
+          activeGallery === "art" ? "block" : "hidden"
+        }`}
         style={{
           scrollbarWidth: "none", // For Firefox
           msOverflowStyle: "none", // For IE
@@ -51,7 +134,9 @@ export function Gallery() {
                 className="object-cover rounded-sm"
               />
               <div>
-                <p className="font-semibold pt-2">When Flowers Die, Will Love Die Too?</p>
+                <p className="font-semibold pt-2">
+                  When Flowers Die, Will Love Die Too?
+                </p>
                 <p className="text-sm">Painting</p>
               </div>
             </Link>
@@ -99,7 +184,9 @@ export function Gallery() {
                 className="object-cover rounded-sm"
               />
               <div>
-                <p className="font-semibold pt-2">What It Means to Be a Woman</p>
+                <p className="font-semibold pt-2">
+                  What It Means to Be a Woman
+                </p>
                 <p className="text-sm">Painting</p>
               </div>
             </Link>
@@ -115,7 +202,9 @@ export function Gallery() {
                 className="object-cover rounded-sm"
               />
               <div>
-                <p className="font-semibold pt-2">Still-Life of Contemporary Objects</p>
+                <p className="font-semibold pt-2">
+                  Still-Life of Contemporary Objects
+                </p>
                 <p className="text-sm">Painting</p>
               </div>
             </Link>
@@ -172,12 +261,11 @@ export function Gallery() {
         </div>
       </div>
 
-
-
       {/* design gallery */}
       <div
-        className={`w-3/4 pb-10 overflow-y-auto ${activeGallery === "design" ? "block" : "hidden"
-          }`}
+        className={`w-3/4 pb-10 overflow-y-auto ${
+          activeGallery === "design" ? "block" : "hidden"
+        }`}
         style={{
           scrollbarWidth: "none", // For Firefox
           msOverflowStyle: "none", // For IE
@@ -212,7 +300,9 @@ export function Gallery() {
                 className="object-cover rounded-sm"
               />
               <div>
-                <p className="font-semibold pt-2">Once Upon a Wet and Orange Day</p>
+                <p className="font-semibold pt-2">
+                  Once Upon a Wet and Orange Day
+                </p>
                 <p className="text-sm">Book Design</p>
               </div>
             </Link>
@@ -228,7 +318,9 @@ export function Gallery() {
                 className="object-cover rounded-sm"
               />
               <div>
-                <p className="font-semibold pt-2">Janice, Fashion Shopping Chatbot</p>
+                <p className="font-semibold pt-2">
+                  Janice, Fashion Shopping Chatbot
+                </p>
                 <p className="text-sm">UX Design</p>
               </div>
             </Link>
@@ -239,11 +331,31 @@ export function Gallery() {
 
       {/* navigation */}
       <div className="w-1/4 flex flex-col justify-end items-end space-y-5 pb-10">
-        <button onClick={() => setActiveGallery("art")}> <Image src="/svgs/art.svg" width={50} height={0} alt="" className={`${activeGallery === "design" ? "opacity-30" : "opacity-100"
-          }`} /> </button>
-        <button onClick={() => setActiveGallery("design")}> <Image src="/svgs/design.svg" width={100} height={0} alt="" className={`${activeGallery === "design" ? "opacity-100" : "opacity-30"
-          }`} /> </button>
+        <button onClick={() => setActiveGallery("art")}>
+          {" "}
+          <Image
+            src="/svgs/art.svg"
+            width={50}
+            height={0}
+            alt=""
+            className={`${
+              activeGallery === "design" ? "opacity-30" : "opacity-100"
+            }`}
+          />{" "}
+        </button>
+        <button onClick={() => setActiveGallery("design")}>
+          {" "}
+          <Image
+            src="/svgs/design.svg"
+            width={100}
+            height={0}
+            alt=""
+            className={`${
+              activeGallery === "design" ? "opacity-100" : "opacity-30"
+            }`}
+          />{" "}
+        </button>
       </div>
     </div>
-  )
+  );
 }
