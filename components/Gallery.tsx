@@ -1,9 +1,9 @@
 "use client";
+
 import Image from "next/image";
 import { useState } from "react";
-import Link from "next/link";
-
 import { useEffect } from "react";
+import Link from "next/link";
 
 declare global {
   interface Window {
@@ -13,92 +13,7 @@ declare global {
   }
 }
 
-export function Display() {
-  return (
-    <div className="flex items-center justify-center h-screen">
-      <Image
-        src="/images/peter.png"
-        width={300}
-        height={200}
-        alt="sme and peter"
-      />
-    </div>
-  );
-}
-
-export function Blurb() {
-  // Handler for design icon click
-  const handleDesignClick = () => {
-    // Get gallery element
-    const galleryElement = document.querySelector(".snap-start.snap-always");
-
-    // Set active gallery to design before scrolling
-    if (window.__nextGalleryComponent?.setActiveGallery) {
-      window.__nextGalleryComponent.setActiveGallery("design");
-    }
-
-    // Scroll to gallery
-    if (galleryElement) {
-      galleryElement.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  // Handler for art icon click
-  const handleArtClick = () => {
-    // Get gallery element
-    if (window.__nextGalleryComponent?.setActiveGallery) {
-      window.__nextGalleryComponent.setActiveGallery("art");
-    }
-
-    const galleryElement = document.querySelector(".snap-start.snap-always");
-    if (galleryElement) {
-      galleryElement.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  return (
-    <div className="flex flex-col justify-end h-screen pb-10">
-      <p className="text-justify text-4xl">
-        <strong>
-          VISUAL DESIGNER AND ARTIST BASED IN NEW HAVEN AND BEIJING.
-        </strong>{" "}
-        I
-        <span onClick={handleDesignClick} className="cursor-pointer">
-          <Image
-            src="/svgs/design.svg"
-            width={125}
-            height={0}
-            alt=""
-            className="inline-block align-middle mx-3 -mt-[3px]"
-          />
-        </span>
-        TO SOLVE OTHER PEOPLE&apos;S PROBLEMS AND MAKE
-        <span onClick={handleArtClick} className="cursor-pointer">
-          <Image
-            src="/svgs/art.svg"
-            width={70}
-            height={0}
-            alt=""
-            className="inline-block align-middle mx-3 -mt-[3px]"
-          />
-        </span>
-        TO SOLVE MY OWN PROBLEM. WHAT I CAN&apos;T SOLVE I PUT INTO
-        <a href="https://medium.com/@lilylinthoughts" target="_blank">
-          <Image
-            src="/svgs/words.svg"
-            width={125}
-            height={0}
-            alt=""
-            className="inline-block align-middle mx-3 -mt-[3px]"
-          />
-        </a>
-        .{" "}
-      </p>
-    </div>
-  );
-}
-
-export function Gallery() {
+export default function Gallery() {
   const [activeGallery, setActiveGallery] = useState("art");
 
   useEffect(() => {
