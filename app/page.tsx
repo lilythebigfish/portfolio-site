@@ -8,7 +8,7 @@ import Gallery from "@/components/Gallery";
 
 import { useState, useEffect } from "react";
 
-export function MobileBlocker() {
+function MobileBlocker() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
