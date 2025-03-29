@@ -30,7 +30,7 @@ export default function Blurb() {
 
   return (
     <div className="flex flex-col justify-between h-screen pt-30 pb-10">
-      <div className="flex-grow flex flex-col items-center justify-center mt-10">
+      <div className="flex-grow flex flex-col items-center justify-center mt-14">
         <Image
           src={"/art/Homepage.gif"}
           width={400}
