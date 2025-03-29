@@ -52,7 +52,7 @@ export default function Blurb() {
             VISUAL DESIGNER AND ARTIST BASED IN NEW HAVEN AND BEIJING.
           </strong>{" "}
           I
-          <span onClick={handleDesignClick} className="cursor-pointer">
+          <span onClick={handleDesignClick}>
             <Image
               src="/svgs/design.svg"
               width={130}
@@ -62,7 +62,7 @@ export default function Blurb() {
             />
           </span>
           TO SOLVE OTHER PEOPLE&apos;S PROBLEMS AND MAKE
-          <span onClick={handleArtClick} className="cursor-pointer">
+          <span onClick={handleArtClick}>
             <Image
               src="/svgs/art.svg"
               width={70}
@@ -72,15 +72,13 @@ export default function Blurb() {
             />
           </span>
           TO SOLVE MY OWN PROBLEM. WHAT I CAN&apos;T SOLVE I PUT INTO
-          <a href="https://medium.com/@lilylinthoughts" target="_blank">
-            <Image
-              src="/svgs/words.svg"
-              width={130}
-              height={0}
-              alt=""
-              className="inline-block align-middle mx-3 -mt-[3px]"
-            />
-          </a>
+          <Image
+            src="/svgs/words.svg"
+            width={130}
+            height={0}
+            alt=""
+            className="inline-block align-middle mx-3 -mt-[3px]"
+          />
           .{" "}
         </p>
       </div>

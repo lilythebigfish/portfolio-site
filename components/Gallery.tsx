@@ -183,7 +183,6 @@ export default function Gallery({ hideSwitcher }: { hideSwitcher: boolean }) {
           {activeGallery === "art" ? <ArtGallery /> : <DesignGallery />}
         </div>
       </div>
-      {/* Navigations */}
       <div
         className={`fixed bottom-10 w-full flex justify-between px-20 transition-opacity duration-500 ${
           hideSwitcher ? "opacity-0 pointer-events-none" : "opacity-100"
