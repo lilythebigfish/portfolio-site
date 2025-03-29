@@ -102,7 +102,7 @@ export default function Home() {
   );
 }
 
-export function Landing() {
+function Landing() {
   return (
     <div id="blurb-section" className="h-screen snap-start mx-20">
       <Blurb />
