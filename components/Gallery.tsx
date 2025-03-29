@@ -1,9 +1,5 @@
-"use client";
-
 import Image from "next/image";
 import { useState } from "react";
-import { useEffect } from "react";
-import Link from "next/link";
 
 declare global {
   interface Window {
@@ -13,243 +9,187 @@ declare global {
   }
 }
 
-export default function Gallery() {
-  const [activeGallery, setActiveGallery] = useState("art");
+const Art = [
+  {
+    slug: "flowers",
+    imageSrc: "/art/flowers-1.JPG",
+    title: "When Flowers Die, Will Love Die Too?",
+    type: "Painting",
+  },
+  {
+    slug: "stretch",
+    imageSrc: "/art/stretch-pastel.JPG",
+    title: "Stretch",
+    type: "Drawing",
+  },
+  {
+    slug: "home",
+    imageSrc: "/art/home.jpg",
+    title: "Home",
+    type: "Drawing",
+  },
+  {
+    slug: "woman",
+    imageSrc: "/art/woman.jpg",
+    title: "What It Means to Be a Woman",
+    type: "Painting",
+  },
+  {
+    slug: "contemporary-still-life",
+    imageSrc: "/art/still-life.jpg",
+    title: "Still-Life of Contemporary Objects",
+    type: "Painting",
+  },
+  {
+    slug: "food-dipped-in-milk",
+    imageSrc: "/art/milk.jpg",
+    title: "Food Dipped In Milk",
+    type: "Woodcut",
+  },
+  {
+    slug: "the-embrace",
+    imageSrc: "/art/embrace-1.png",
+    title: "The Embrace",
+    type: "Sculpture",
+  },
+  {
+    slug: "boats",
+    imageSrc: "/art/day.jpg",
+    title: "Boats",
+    type: "Drawing",
+  },
+];
 
-  useEffect(() => {
-    window.__nextGalleryComponent = { setActiveGallery };
-    return () => {
-      delete window.__nextGalleryComponent;
-    };
-  }, []);
+const Design = [
+  {
+    slug: "njordic-supermarket",
+    imageSrc: "/design/njordic-cover.jpg",
+    title: "Njordic Supermarket",
+    type: "Brand Design",
+  },
+  {
+    slug: "janice",
+    imageSrc: "/design/janice-cover.png",
+    title: "Janice, Fashion Shopping Chatbot",
+    type: "UX Design",
+  },
+  {
+    slug: "wet-and-orange",
+    imageSrc: "/design/book_holding.jpg",
+    title: "Once Upon a Wet and Orange Day",
+    type: "Book Design",
+  },
+];
+
+function ArtGallery() {
+  type ArtItem = {
+    slug: string;
+    imageSrc: string;
+    title: string;
+    type: string;
+  };
+
+  const [selectedArt, setSelectedArt] = useState<ArtItem | null>(null);
 
   return (
-    <div
-      className="h-screen flex snap-start snap-always mx-20"
-      id="gallery-section"
-    >
-      {/* art gallery */}
-      <div
-        className={`w-3/4 pb-10 overflow-y-auto ${
-          activeGallery === "art" ? "block" : "hidden"
-        }`}
-        style={{
-          scrollbarWidth: "none", // For Firefox
-          msOverflowStyle: "none", // For IE
-        }}
-      >
-        <div className="columns-2 gap-8 space-y-4 pt-24">
-          {/* Individual Items */}
-          <div className="break-inside-avoid">
-            <Link href="/art/flowers">
-              <Image
-                src="/art/flowers-1.JPG"
-                width={500}
-                height={400}
-                layout="responsive"
-                alt="Flowers"
-                className="object-cover rounded-sm"
-              />
-              <div>
-                <p className="font-semibold pt-2">
-                  When Flowers Die, Will Love Die Too?
-                </p>
-                <p className="text-sm">Painting</p>
+    <>
+      {selectedArt && (
+        <div
+          className="fixed inset-0 bg-white bg-opacity-95 z-50 flex items-center justify-center p-10"
+          onClick={() => setSelectedArt(null)} // clicking closes
+        >
+          <Image
+            src={selectedArt.imageSrc}
+            width={800}
+            height={800}
+            alt={selectedArt.title}
+            className="object-contain rounded max-h-[90vh] w-auto"
+          />
+        </div>
+      )}
+
+      <div className="grid grid-cols-3 gap-12">
+        {Art.map((art) => {
+          return (
+            <div
+              key={art.slug}
+              className="flex flex-col h-full cursor-pointer"
+              onClick={() => {
+                setSelectedArt(art);
+              }}
+            >
+              <div className="flex-grow flex items-center justify-center">
+                <Image
+                  src={art.imageSrc}
+                  width={300}
+                  height={400}
+                  layout="intrinsic"
+                  alt={art.title}
+                  className="object-contain rounded-sm"
+                />
               </div>
-            </Link>
-          </div>
-          <div className="break-inside-avoid">
-            <Link href="/art/stretch">
-              <Image
-                src="/art/stretch-pastel.JPG"
-                width={500}
-                height={400}
-                layout="responsive"
-                alt="Stretch"
-                className="object-cover rounded-sm"
-              />
-              <div>
-                <p className="font-semibold pt-2">Stretch</p>
-                <p className="text-sm">Drawing</p>
+
+              <div className="mt-2">
+                <p className="font-bold uppercase">{art.title}</p>
+                <p className="text-sm text-gray-400 uppercase">{art.type}</p>
               </div>
-            </Link>
+            </div>
+          );
+        })}
+      </div>
+    </>
+  );
+}
+
+function DesignGallery() {
+  return (
+    <div className="w-2/3 mx-auto flex flex-col space-y-8">
+      {Design.map((design) => {
+        return (
+          <div key={design.slug} className="flex flex-col space-y-3">
+            <div className="relative w-full aspect-video overflow-hidden rounded-sm">
+              <a href={`/design/${design.slug}`} rel="noopener noreferrer">
+                <Image
+                  src={design.imageSrc}
+                  alt={design.title}
+                  fill
+                  className="object-cover rounded-sm"
+                />
+              </a>
+            </div>
+
+            <div>
+              <p className="">
+                <span className="font-bold uppercase">{design.title}</span>{" "}
+                <span className="pl-3 text-gray-400 uppercase">
+                  {design.type}
+                </span>
+              </p>
+            </div>
           </div>
-          <div className="break-inside-avoid">
-            <Link href="/art/home">
-              <Image
-                src="/art/home.jpg"
-                width={400}
-                height={300}
-                layout="responsive"
-                alt="Home"
-                className="object-cover rounded-sm"
-              />
-              <div>
-                <p className="font-semibold pt-2">Home</p>
-                <p className="text-sm">Drawing</p>
-              </div>
-            </Link>
-          </div>
-          <div className="break-inside-avoid">
-            <Link href="/art/woman">
-              <Image
-                src="/art/woman.jpg"
-                width={300}
-                height={400}
-                layout="responsive"
-                alt="What It Means to Be a Woman"
-                className="object-cover rounded-sm"
-              />
-              <div>
-                <p className="font-semibold pt-2">
-                  What It Means to Be a Woman
-                </p>
-                <p className="text-sm">Painting</p>
-              </div>
-            </Link>
-          </div>
-          <div className="break-inside-avoid">
-            <Link href="/art/contemporary-still-life">
-              <Image
-                src="/art/still-life.jpg"
-                width={300}
-                height={400}
-                layout="responsive"
-                alt="What It Means to Be a Woman"
-                className="object-cover rounded-sm"
-              />
-              <div>
-                <p className="font-semibold pt-2">
-                  Still-Life of Contemporary Objects
-                </p>
-                <p className="text-sm">Painting</p>
-              </div>
-            </Link>
-          </div>
-          <div className="break-inside-avoid">
-            <Link href="/art/food-dipped-in-milk">
-              <Image
-                src="/art/milk.jpg"
-                width={300}
-                height={400}
-                layout="responsive"
-                alt="Food Dipped In Milk"
-                className="object-cover rounded-sm"
-              />
-              <div>
-                <p className="font-semibold pt-2">Food Dipped In Milk</p>
-                <p className="text-sm">Woodcut</p>
-              </div>
-            </Link>
-          </div>
-          <div className="break-inside-avoid">
-            <Link href="/art/the-embrace">
-              <Image
-                src="/art/embrace-1.png"
-                width={300}
-                height={400}
-                layout="responsive"
-                alt="Food Dipped In Milk"
-                className="object-cover rounded-sm"
-              />
-              <div>
-                <p className="font-semibold pt-2">The Embrace</p>
-                <p className="text-sm">Sculpture</p>
-              </div>
-            </Link>
-          </div>
-          <div className="break-inside-avoid">
-            <Link href="/art/boats">
-              <Image
-                src="/art/day.jpg"
-                width={300}
-                height={400}
-                layout="responsive"
-                alt="Food Dipped In Milk"
-                className="object-cover rounded-sm"
-              />
-              <div>
-                <p className="font-semibold pt-2">Boats</p>
-                <p className="text-sm">Drawing</p>
-              </div>
-            </Link>
-          </div>
-          {/* Add more items */}
+        );
+      })}
+    </div>
+  );
+}
+
+export default function Gallery({ hideSwitcher }: { hideSwitcher: boolean }) {
+  const [activeGallery, setActiveGallery] = useState("art");
+
+  return (
+    <div className="pt-28 pb-10 pt-40">
+      <div className="flex items-center justify-center">
+        <div className="w-2/3">
+          {activeGallery === "art" ? <ArtGallery /> : <DesignGallery />}
         </div>
       </div>
-
-      {/* design gallery */}
+      {/* Navigations */}
       <div
-        className={`w-3/4 pb-10 overflow-y-auto ${
-          activeGallery === "design" ? "block" : "hidden"
+        className={`fixed bottom-10 w-full flex justify-between px-20 transition-opacity duration-500 ${
+          hideSwitcher ? "opacity-0 pointer-events-none" : "opacity-100"
         }`}
-        style={{
-          scrollbarWidth: "none", // For Firefox
-          msOverflowStyle: "none", // For IE
-        }}
       >
-        <div className="columns-2 gap-8 space-y-4 pt-24">
-          {/* Individual Items */}
-          <div className="break-inside-avoid">
-            <Link href="/design/njordic-supermarket">
-              <Image
-                src="/design/njordic-cover.jpg"
-                width={500}
-                height={400}
-                layout="responsive"
-                alt="Njordic Supermarket"
-                className="object-cover rounded-sm"
-              />
-              <div>
-                <p className="font-semibold pt-2">Njordic Supermarket</p>
-                <p className="text-sm">Brand Design</p>
-              </div>
-            </Link>
-          </div>
-          <div className="break-inside-avoid">
-            <Link href="/design/wet-and-orange">
-              <Image
-                src="/design/book_holding.jpg"
-                width={400}
-                height={300}
-                layout="responsive"
-                alt="Once Upon a Wet and Orange Day"
-                className="object-cover rounded-sm"
-              />
-              <div>
-                <p className="font-semibold pt-2">
-                  Once Upon a Wet and Orange Day
-                </p>
-                <p className="text-sm">Book Design</p>
-              </div>
-            </Link>
-          </div>
-          <div className="break-inside-avoid">
-            <Link href="/design/janice">
-              <Image
-                src="/design/janice-cover.png"
-                width={300}
-                height={400}
-                layout="responsive"
-                alt="Janice, Fashion Chatbot"
-                className="object-cover rounded-sm"
-              />
-              <div>
-                <p className="font-semibold pt-2">
-                  Janice, Fashion Shopping Chatbot
-                </p>
-                <p className="text-sm">UX Design</p>
-              </div>
-            </Link>
-          </div>
-          {/* Add more items */}
-        </div>
-      </div>
-
-      {/* navigation */}
-      <div className="w-1/4 flex flex-col justify-end items-end space-y-5 pb-10">
         <button onClick={() => setActiveGallery("art")}>
-          {" "}
           <Image
             src="/svgs/art.svg"
             width={50}
@@ -258,10 +198,9 @@ export default function Gallery() {
             className={`${
               activeGallery === "design" ? "opacity-30" : "opacity-100"
             }`}
-          />{" "}
+          />
         </button>
         <button onClick={() => setActiveGallery("design")}>
-          {" "}
           <Image
             src="/svgs/design.svg"
             width={100}
@@ -270,7 +209,7 @@ export default function Gallery() {
             className={`${
               activeGallery === "design" ? "opacity-100" : "opacity-30"
             }`}
-          />{" "}
+          />
         </button>
       </div>
     </div>

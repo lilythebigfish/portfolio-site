@@ -4,7 +4,7 @@ import Blurb from "@/components/Blurb";
 // import Gallery from "@/components/Gallery";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/NavBar";
-import ImprovedGallery from "@/components/ImprovedGallery";
+import Gallery from "@/components/Gallery";
 
 import { useState, useEffect } from "react";
 
@@ -95,7 +95,7 @@ export default function Home() {
       <MobileBlocker />
       <div className="h-screen overflow-y-scroll">
         <Landing />
-        <ImprovedGallery hideSwitcher={hideSwitcher} />
+        <Gallery hideSwitcher={hideSwitcher} />
         <Footer />
       </div>
     </>
