@@ -30,7 +30,7 @@ export default function Blurb() {
 
   return (
     <div className="flex flex-col justify-between h-screen pt-30 pb-10">
-      <div className="flex-grow flex items-center justify-center">
+      <div className="flex-grow flex flex-col items-center justify-center mt-10">
         <Image
           src={"/art/Homepage.gif"}
           width={400}
@@ -38,9 +38,16 @@ export default function Blurb() {
           alt="Homepage"
           className="mx-auto w-6xl h-6xl"
         />
+        <p
+          className="text-sm animate-bounce
+ text-center mt-10 text-primary"
+        >
+          Scroll for my work!
+        </p>
       </div>
-      <div>
-        <p className="text-justify text-4xl">
+
+      <div className="-tracking-tighter">
+        <p className="text-justify text-4xl ">
           <strong>
             VISUAL DESIGNER AND ARTIST BASED IN NEW HAVEN AND BEIJING.
           </strong>{" "}
