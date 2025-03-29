@@ -55,7 +55,7 @@ export default function Blurb() {
           <span onClick={handleDesignClick} className="cursor-pointer">
             <Image
               src="/svgs/design.svg"
-              width={150}
+              width={130}
               height={0}
               alt=""
               className="inline-block align-middle mx-3 -mt-[3px]"
@@ -65,7 +65,7 @@ export default function Blurb() {
           <span onClick={handleArtClick} className="cursor-pointer">
             <Image
               src="/svgs/art.svg"
-              width={85}
+              width={70}
               height={0}
               alt=""
               className="inline-block align-middle mx-3 -mt-[3px]"
@@ -75,7 +75,7 @@ export default function Blurb() {
           <a href="https://medium.com/@lilylinthoughts" target="_blank">
             <Image
               src="/svgs/words.svg"
-              width={150}
+              width={130}
               height={0}
               alt=""
               className="inline-block align-middle mx-3 -mt-[3px]"

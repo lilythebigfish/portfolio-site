@@ -1,9 +1,10 @@
 "use client";
 
 import Blurb from "@/components/Blurb";
-import Gallery from "@/components/Gallery";
+// import Gallery from "@/components/Gallery";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/NavBar";
+import ImprovedGallery from "@/components/ImprovedGallery";
 
 import { useState, useEffect } from "react";
 
@@ -54,14 +55,47 @@ export function MobileBlocker() {
 }
 
 export default function Home() {
+  const [hideSwitcher, setHideSwitcher] = useState(false);
+
+  useEffect(() => {
+    const handleVisibility = (entries: IntersectionObserverEntry[]) => {
+      const isBlurbVisible = entries.find(
+        (e) => e.target.id === "blurb-section"
+      )?.isIntersecting;
+      const isFooterVisible = entries.find(
+        (e) => e.target.id === "footer"
+      )?.isIntersecting;
+
+      if (isBlurbVisible || isFooterVisible) {
+        setHideSwitcher(true);
+      } else {
+        setHideSwitcher(false);
+      }
+    };
+
+    const observer = new IntersectionObserver(handleVisibility, {
+      threshold: 0.1,
+    });
+
+    const blurb = document.getElementById("blurb-section");
+    const footer = document.getElementById("footer");
+
+    if (blurb) observer.observe(blurb);
+    if (footer) observer.observe(footer);
+
+    return () => {
+      if (blurb) observer.unobserve(blurb);
+      if (footer) observer.unobserve(footer);
+    };
+  }, []);
+
   return (
     <>
       <Navbar />
       <MobileBlocker />
-
-      <div className="h-screen overflow-y-scroll snap-y snap-mandatory">
+      <div className="h-screen overflow-y-scroll">
         <Landing />
-        <Gallery />
+        <ImprovedGallery hideSwitcher={hideSwitcher} />
         <Footer />
       </div>
     </>
@@ -70,7 +104,7 @@ export default function Home() {
 
 export function Landing() {
   return (
-    <div className="h-screen snap-start mx-20">
+    <div id="blurb-section" className="h-screen snap-start mx-20">
       <Blurb />
     </div>
   );

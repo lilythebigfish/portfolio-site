@@ -1,6 +1,9 @@
 export default function Footer() {
   return (
-    <footer className="text-gray-600 body-font mx-20 snap-end border-t">
+    <footer
+      id="footer"
+      className="text-gray-600 body-font mx-20 snap-end border-t"
+    >
       <div className="flex items-center py-10 sm:flex-row flex-col w-full">
         <p className="text-sm text-gray-500 sm:py-2 sm:mt-0 mt-4">
           Copyright &copy; {new Date().getFullYear()} Lily Lin — Built with
