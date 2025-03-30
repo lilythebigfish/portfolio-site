@@ -11,9 +11,33 @@ declare global {
 
 const Art = [
   {
-    slug: "flowers",
-    imageSrc: "/art/flowers-1.JPG",
-    title: "When Flowers Die, Will Love Die Too?",
+    slug: "red1",
+    imageSrc: "/art/red-feeling.jpg",
+    title: "RED searching",
+    type: "Painting",
+  },
+  {
+    slug: "flowers1",
+    imageSrc: "/art/flowers-1.jpg",
+    title: "When Flowers Die, Will Love Die Too? (1)",
+    type: "Painting",
+  },
+  {
+    slug: "flowers2",
+    imageSrc: "/art/flowers-2.jpg",
+    title: "When Flowers Die, Will Love Die Too? (2)",
+    type: "Painting",
+  },
+  {
+    slug: "flowers3",
+    imageSrc: "/art/flowers-3.jpg",
+    title: "When Flowers Die, Will Love Die Too? (3)",
+    type: "Painting",
+  },
+  {
+    slug: "flowers4",
+    imageSrc: "/art/flowers-4.jpg",
+    title: "When Flowers Die, Will Love Die Too? (4)",
     type: "Painting",
   },
   {
@@ -53,9 +77,15 @@ const Art = [
     type: "Sculpture",
   },
   {
-    slug: "boats",
+    slug: "boats1",
     imageSrc: "/art/day.jpg",
-    title: "Boats",
+    title: "Boats (Day)",
+    type: "Drawing",
+  },
+  {
+    slug: "boats2",
+    imageSrc: "/art/night.jpg",
+    title: "Boats (Night)",
     type: "Drawing",
   },
 ];
