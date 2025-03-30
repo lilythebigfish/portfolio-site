@@ -12,7 +12,7 @@ const ProjectPage = () => {
         description: "Final project for my class Introduction to Graphic Design. Zine made from a collection of photos I took over 3 month's time.",
         design: true,
         image: "/design/book_holding.jpg",
-        role: "Graphic Designer",
+        type: "Book Design",
         date: "Apr 2024",
         tools: (
             <ul>
@@ -40,25 +40,31 @@ const ProjectPage = () => {
                     layout="responsive"
                     width={0}
                     height={0}
-                    objectFit="cover"
-                    objectPosition="center"
-                    alt="brainstorm"
+                    alt="book"
+                    className="mt-4 mb-8"
                 />
 
-                <Header title="Layout Planning" />
-                <Body content="I decided to structure my photo book by matching pairs of photos with visual similarities, ordering them from most apparent connection to most discreet.
-                I also inserted full-spread images if a photos had an interesting texture I wanted to highlight. To experiment with book and image size in real form, I created 5 different dummies before settling on my final product." />
 
-                <div className="flex justify-center items-center">
-                    <Image
-                        src="/design/book_plan.JPG"
-                        alt="Book Plan"
-                        layout="intrinsic"
-                        width={600}
-                        height={0}
-                        className="my-4"
-                    />
+                <div className="grid grid-cols-3 gap-32">
+                    <div className="col-start-1 col-span-1">
+                        <Header title="Layout Planning" />
+                        <Body
+                            content="I decided to structure my photo book by matching pairs of photos with visual similarities, ordering them from most apparent connection to most discreet.
+                I also inserted full-spread images if a photos had an interesting texture I wanted to highlight. To experiment with book and image size in real form, I created 5 different dummies before settling on my final product."
+                        />
+                    </div>
+                    <div className="col-start-2 col-span-2">
+                        <Image
+                            src="/design/book_plan.JPG"
+                            layout="responsive"
+                            width={0}
+                            height={0}
+                            alt="book"
+                            className="mt-12"
+                        />
+                    </div>
                 </div>
+
 
                 <Image
                     src="/design/book_dummies.jpg"
@@ -66,7 +72,7 @@ const ProjectPage = () => {
                     width={0}
                     height={0}
                     alt="Book dummies"
-                    className="my-8"
+                    className="mt-16 mb-8"
                 />
 
                 {/* image of dummies */}
@@ -86,17 +92,23 @@ const ProjectPage = () => {
                     className="my-8"
                 />
 
-                <Body content="I saddle-stitched the zine with orange thread, separating the zine into 5 8-page signatures. 
+                <div className="grid grid-cols-3 gap-32">
+                    <div className="col-start-1 col-span-1">
+                    <Body content="I saddle-stitched the zine with orange thread, separating the zine into 5 8-page signatures. 
                 This way, I was able to maximize the amount of spreads that can be opened flat since there are many full-bleed images in my zine."/>
 
-                <Image
+                    </div>
+                    <div className="col-start-2 col-span-2">
+                    <Image
                     src="/design/book_side.jpg"
                     layout="responsive"
                     width={0}
                     height={0}
                     alt="Book Cover"
-                    className="my-8"
+                    className="mb-8"
                 />
+                    </div>
+                </div>
 
                 <Header title="Final Product: Selected Pages" />
 
@@ -111,7 +123,7 @@ const ProjectPage = () => {
                 />
 
                 <Body content="" />
-                
+
                 <Image
                     src="/design/book_p1.jpg"
                     layout="responsive"
@@ -170,7 +182,7 @@ const ProjectPage = () => {
             </article>
 
             {/* Navigation Section */}
-            <div className="flex flex-row justify-center space-x-24 mx-20 my-8 pb-8">
+            <div className="flex flex-row justify-center space-x-24 mx-20 mt-36 mb-16">
                 <Link href="/design/njordic-supermarket">
                     <Image
                         src="/svgs/back.svg"

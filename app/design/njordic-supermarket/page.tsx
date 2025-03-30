@@ -9,11 +9,11 @@ const ProjectPage = () => {
     const [project] = useState<Project>({
         client: "DIS Summer Program 2024",
         title: "Njordic Supermarket",
-        description: "I designed a brand identity centered on quality selection and minimalism for my hypothetical Danish supermarket, Njordic, as part of DIS's Graphic Design Foundation Studio in Copenhagen.",
+        description: "I spent the summer of 2024 studying brand design in Copenhagen. For my coursework, I designed a Danish supermarket identity that aimed to reduce elite shoppers' decision paralysis by providing high-quality product selection. ",
         design: true,
-        image: "/design/njordic-cover.jpg",
-        role: "Graphic designer",
-        date: "Jun - Jul 2024",
+        image: "/design/njordic-mockup.jpg",
+        type: "Brand Design",
+        date: "6 weeks",
         tools: (
             <ul>
                 <li>Indesign</li>
@@ -32,64 +32,42 @@ const ProjectPage = () => {
             {/* Article Section */}
             <article className="flex-grow mx-72 pt-24">
                 <Header title="Context" />
-                <Body content="In January 2023, Irma, the staple supermarket in Denmark, announced that it would close all its stores. 
-                            For centuries, the Danes treasured the Irma girl and the supermarket's design initiatives, but its sales was eventually was outcompeted by new discount markets.
-                            In order to fill in the gap Irma left, we were to design a new brand that solves a modern Danish supermarket problem." />
-                <div className="flex justify-center items-center">
-                    <Image
-                        src="/design/irma.jpg"
-                        alt="Example Image"
-                        layout="intrinsic"
-                        width={600}
-                        height={0}
-                        className="my-4"
-                    />
+                <div className="grid grid-cols-3 gap-32">
+                    <div className="col-start-1 col-span-2">
+                        <Body
+                            content="In January 2023, Irma, the staple supermarket in Denmark, announced that it would close all its stores. For centuries, the Danes treasured the Irma girl and the supermarket's design initiatives, but its sales was eventually was outcompeted by new discount markets. In order to fill in the gap Irma left, we were to design a new brand that solves a modern Danish supermarket problem."
+                        />
+                    </div>
+                    <div className="col-start-3 col-span-1">
+                        <Image
+                            src="/design/njordic-irma.jpeg"
+                            layout="responsive"
+                            width={0}
+                            height={0}
+                            alt="irma"
+                            className=""
+                        />
+                    </div>
                 </div>
 
-                <Header title="The Problem" />
-                <Body content={<> After conducting research and brainstorming, I identified the key problem in supermarket shopping that I wanted to solve:
-                    <strong> How should we reduce shopper&apos;s decision paralysis caused by overstimulation? </strong></>} />
-
-                <Image
-                    src="/design/njordic-sketches.png"
-                    layout="responsive"
-                    width={0}
-                    height={0}
-                    objectFit="cover"
-                    objectPosition="center"
-                    alt="sketches"
-                />
-
-                <Header title="Personna Study" />
-
-                <Image
-                    src="/design/njordic-personna.jpg"
-                    layout="responsive"
-                    width={0}
-                    height={0}
-                    objectFit="cover"
-                    objectPosition="center"
-                    alt="sketches"
-                />
-
-                <Header title="Logo" />
-
-                <Body content="The
-                                name “Njordic” comes from Njord, the nordic god of the sea and
-                                navigation, embodying Njordic’s dedication to navigating customers
-                                through a sea of grocery choices. This is achieved by providing only
-                                the highest quality products in store and employing minimalistic
-                                design principles." />
-
-                <Image
-                    src="/design/njordic-logo.png"
-                    layout="responsive"
-                    width={0}
-                    height={0}
-                    objectFit="cover"
-                    objectPosition="center"
-                    alt="Book Cover"
-                />
+                <Header title="Identifying the Problem + Solution" />
+                <div className="grid grid-cols-3 gap-32">
+                    <div className="col-start-1 col-span-1">
+                        <Body
+                            content="After conducting research to understand grocery shoppers' pain points, I realized the complaints fell into three main baskets: visual overstimulation, decision paralysis, and supermarket anxiety. After distilling the causation relationship among them, I identified the precise design problem and the key ideas for a solution."
+                        />
+                    </div>
+                    <div className="col-start-2 col-span-2">
+                        <Image
+                            src="/design/njordic-problem.png"
+                            layout="responsive"
+                            width={0}
+                            height={0}
+                            alt="irma"
+                            className=""
+                        />
+                    </div>
+                </div>
 
                 <Header title="Identity Statement" />
 
@@ -99,10 +77,20 @@ const ProjectPage = () => {
                     width={800}
                     height={500}
                     alt="Article Image"
-                    className="my-8"
+                    className="px-32"
                 />
 
-                <Header title="Style" />
+                <Header title="Final Brand Design" />
+
+                <Image
+                    src="/design/njordic-logo.png"
+                    layout="responsive"
+                    width={800}
+                    height={500}
+                    alt="Article Image"
+                    className="my-8"
+                />
+                
                 <Image
                     src="/design/njordic-style.png"
                     layout="responsive"
@@ -152,7 +140,7 @@ const ProjectPage = () => {
             </article>
 
             {/* Navigation Section */}
-            <div className="flex flex-row justify-center space-x-24 mx-20 my-8 pb-8">
+            <div className="flex flex-row justify-center space-x-24 mx-20 mt-36 mb-16">
                 <Link href="/design/wet-and-orange">
                     <Image
                         src="/svgs/next.svg"

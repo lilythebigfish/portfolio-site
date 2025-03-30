@@ -63,19 +63,19 @@ const Art = [
 const Design = [
   {
     slug: "njordic-supermarket",
-    imageSrc: "/design/njordic-cover.jpg",
+    imageSrc: "/design/njordic-mockup.jpg",
     title: "Njordic Supermarket",
     type: "Brand Design",
   },
   {
     slug: "janice",
-    imageSrc: "/design/janice-cover.png",
+    imageSrc: "/design/janice-mockup.jpg",
     title: "Janice, Fashion Shopping Chatbot",
     type: "UX Design",
   },
   {
     slug: "wet-and-orange",
-    imageSrc: "/design/book_holding.jpg",
+    imageSrc: "/design/book_cover.jpg",
     title: "Once Upon a Wet and Orange Day",
     type: "Book Design",
   },
