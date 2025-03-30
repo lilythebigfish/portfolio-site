@@ -18,7 +18,7 @@ const Art = [
   },
   {
     slug: "flowers1",
-    imageSrc: "/art/flowers-1.jpg",
+    imageSrc: "/art/flowers-1-new.jpg",
     title: "When Flowers Die, Will Love Die Too? (1)",
     type: "Painting",
   },
