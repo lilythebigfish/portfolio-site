@@ -13,7 +13,7 @@ const ProjectPage = () => {
     description:
       "Final project for my class Introduction to Graphic Design. Zine made from a collection of photos I took over 3 month's time.",
     design: true,
-    image: "/design/book_holding.jpg",
+    image: "/design/book_cover.jpg",
     type: "Book Design",
     date: "Apr 2024",
     tools: (
@@ -139,49 +139,6 @@ const ProjectPage = () => {
           alt="Book Cover"
         />
         <Body content="" />
-        <Image
-          src="/design/book_p2.jpg"
-          layout="responsive"
-          width={0}
-          height={0}
-          objectFit="cover"
-          objectPosition="center"
-          alt="Book Cover"
-        />
-        <Body content="" />
-
-        <Image
-          src="/design/book_p3.jpg"
-          layout="responsive"
-          width={0}
-          height={0}
-          objectFit="cover"
-          objectPosition="center"
-          alt="Book Cover"
-        />
-        <Body content="" />
-
-        <Image
-          src="/design/book_p4.jpg"
-          layout="responsive"
-          width={0}
-          height={0}
-          objectFit="cover"
-          objectPosition="center"
-          alt="Book Cover"
-        />
-        <Body content="" />
-
-        <Image
-          src="/design/book_end.jpg"
-          layout="responsive"
-          width={0}
-          height={0}
-          objectFit="cover"
-          objectPosition="center"
-          alt="Book Cover"
-        />
-        <Body content="" />
 
         <Carousel
           images={[
@@ -193,8 +150,12 @@ const ProjectPage = () => {
             "/design/wet-orange-6.jpg",
             "/design/wet-orange-7.jpg",
             "/design/wet-orange-8.jpg",
+            "/design/book_end.jpg",
           ]}
         />
+
+        <Body content="" />
+        
       </article>
 
       {/* Navigation Section */}
