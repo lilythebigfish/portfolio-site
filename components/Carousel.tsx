@@ -1,5 +1,6 @@
 import { MdOutlineArrowBackIos } from "react-icons/md";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
+
 import { useState } from "react";
 import Image from "next/image";
 
