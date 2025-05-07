@@ -11,6 +11,18 @@ declare global {
 
 const Art = [
   {
+    slug: "light-of-the-world",
+    imageSrc: "/art/light-of-the-world.jpg",
+    title: "Light of the World",
+    type: "Painting",
+  },
+  {
+    slug: "blue-and-orange",
+    imageSrc: "/art/blue-and-orange.jpg",
+    title: "Blue and Orange",
+    type: "Painting",
+  },
+  {
     slug: "red1",
     imageSrc: "/art/red-feeling.jpg",
     title: "RED searching",
