@@ -33,21 +33,21 @@ export default function Blurb() {
       <div className="flex-grow flex flex-col items-center justify-center mt-28">
         <Image
           src={"/art/Homepage.gif"}
-          width={400}
-          height={400}
+          width={350}
+          height={300}
           alt="Homepage"
           className="mx-auto w-6xl h-6xl"
         />
         <p
           className="text-sm animate-bounce
- text-center mt-10 text-primary"
+ text-center m-5 text-primary"
         >
           Scroll for my work!
         </p>
       </div>
 
       <div className="-tracking-tighter">
-        <p className="text-justify text-4xl ">
+        <p className="text-justify text-3xl ">
           <strong>
             VISUAL DESIGNER AND ARTIST BASED IN NEW HAVEN AND BEIJING.
           </strong>{" "}
@@ -55,7 +55,7 @@ export default function Blurb() {
           <span onClick={handleDesignClick}>
             <Image
               src="/svgs/design.svg"
-              width={130}
+              width={120}
               height={0}
               alt=""
               className="inline-block align-middle mx-3 -mt-[3px]"
@@ -65,7 +65,7 @@ export default function Blurb() {
           <span onClick={handleArtClick}>
             <Image
               src="/svgs/art.svg"
-              width={70}
+              width={65}
               height={0}
               alt=""
               className="inline-block align-middle mx-3 -mt-[3px]"
@@ -74,7 +74,7 @@ export default function Blurb() {
           TO SOLVE MY OWN PROBLEM. WHAT I CAN&apos;T SOLVE I PUT INTO
           <Image
             src="/svgs/words.svg"
-            width={130}
+            width={120}
             height={0}
             alt=""
             className="inline-block align-middle mx-3 -mt-[3px]"
