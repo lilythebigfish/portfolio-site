@@ -2,14 +2,14 @@ export default function Footer() {
   return (
     <footer
       id="footer"
-      className="text-gray-600 body-font mx-20 snap-end border-t"
+      className="border-t text-gray-600 text-sm mx-10 lg:mx-20"
     >
-      <div className="flex items-center py-10 sm:flex-row flex-col w-full">
-        <p className="text-sm text-gray-500 sm:py-2 sm:mt-0 mt-4">
+      <div className="flex flex-col w-full sm:flex-row items-center justify-between gap-4 py-6 ">
+        <p className="text-center sm:text-left">
           Copyright &copy; {new Date().getFullYear()} Lily Lin — Built with
           Next.js
         </p>
-        <span className="inline-flex ml-auto justify-center sm:justify-end text-gray-500">
+        <span className="flex gap-4 justify-center sm:justify-right text-gray-500">
           {/* Mail */}
           <a className="ml-3 text-gray-500" href="mailto:lily.lin@yale.edu">
             <svg

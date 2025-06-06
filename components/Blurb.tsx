@@ -30,7 +30,7 @@ export default function Blurb() {
 
   return (
     <div className="flex flex-col justify-between h-screen pt-30 pb-10">
-      <div className="flex-grow flex flex-col items-center justify-center mt-28">
+      <div className="flex-grow flex flex-col items-center justify-center mt-20">
         <Image
           src={"/art/Homepage.gif"}
           width={350}
@@ -38,48 +38,34 @@ export default function Blurb() {
           alt="Homepage"
           className="mx-auto w-6xl h-6xl"
         />
-        <p
-          className="text-sm animate-bounce
- text-center m-5 text-primary"
-        >
-          Scroll for my work!
-        </p>
       </div>
 
       <div className="-tracking-tighter">
-        <p className="text-justify text-3xl ">
+        <p className="text-2xl md:text-3xl ">
           <strong>
             VISUAL DESIGNER AND ARTIST BASED IN NEW HAVEN AND BEIJING.
           </strong>{" "}
           I
-          <span onClick={handleDesignClick}>
+          <span onClick={handleDesignClick} className="cursor-pointer">
             <Image
               src="/svgs/design.svg"
-              width={120}
+              width={90}
               height={0}
               alt=""
-              className="inline-block align-middle mx-3 -mt-[3px]"
+              className="inline-block align-middle mx-2 md:mx-3 -mt-[3px] md:w-24 sm:w-20 animate-bounce"
             />
           </span>
-          TO SOLVE OTHER PEOPLE&apos;S PROBLEMS AND MAKE
-          <span onClick={handleArtClick}>
+          to solve other people&apos;s problems and make
+          <span onClick={handleArtClick} className="cursor-pointer">
             <Image
               src="/svgs/art.svg"
-              width={65}
+              width={50}
               height={0}
               alt=""
-              className="inline-block align-middle mx-3 -mt-[3px]"
+              className="inline-block align-middle mx-2 md:mx-3 -mt-[3px] md:w-14 sm:w-10 animate-bounce"
             />
           </span>
-          TO SOLVE MY OWN PROBLEM. WHAT I CAN&apos;T SOLVE I PUT INTO
-          <Image
-            src="/svgs/words.svg"
-            width={120}
-            height={0}
-            alt=""
-            className="inline-block align-middle mx-3 -mt-[3px]"
-          />
-          .{" "}
+          to solve my own problems.
         </p>
       </div>
     </div>

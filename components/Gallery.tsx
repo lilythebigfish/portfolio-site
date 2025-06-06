@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 declare global {
   interface Window {
@@ -150,7 +150,7 @@ function ArtGallery() {
         </div>
       )}
 
-      <div className="grid grid-cols-3 gap-12">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
         {Art.map((art) => {
           return (
             <div
@@ -185,7 +185,7 @@ function ArtGallery() {
 
 function DesignGallery() {
   return (
-    <div className="w-2/3 mx-auto flex flex-col space-y-8">
+    <div className="grid space-y-8 md:px-20">
       {Design.map((design) => {
         return (
           <div key={design.slug} className="flex flex-col space-y-3">
@@ -199,14 +199,15 @@ function DesignGallery() {
                 />
               </a>
             </div>
-
-            <div>
-              <p className="">
+            {/* label desktop */}
+            <div className="hidden md:flex mt-2">
                 <span className="font-bold uppercase">{design.title}</span>{" "}
-                <span className="pl-3 text-gray-400 uppercase">
-                  {design.type}
-                </span>
-              </p>
+                <span className="pl-3 text-gray-400 uppercase"> {design.type}</span>
+            </div>
+            {/* label mobile */}
+            <div className="md:hidden mt-2">
+                <p className="font-bold uppercase">{design.title}</p>{" "}
+                <p className="text-sm text-gray-400 uppercase"> {design.type}</p>
             </div>
           </div>
         );
@@ -216,17 +217,58 @@ function DesignGallery() {
 }
 
 export default function Gallery({ hideSwitcher }: { hideSwitcher: boolean }) {
-  const [activeGallery, setActiveGallery] = useState("art");
+  const [activeGallery, setActiveGallery] = useState("design");
+
+  useEffect(() => {
+  window.__nextGalleryComponent = {
+    setActiveGallery,
+  };
+
+  return () => {
+    delete window.__nextGalleryComponent;
+  };
+}, []);
+
 
   return (
-    <div className="pt-28 pb-10 pt-40">
+    <div className="pb-10 pt-24">  
+
+        {/* mobile gallery switcher */}
+        <div className={`md:hidden w-full flex justify-between px-14 py-8 z-50 `}>
+        <button onClick={() => setActiveGallery("art")}>
+          <Image
+            src="/svgs/art.svg"
+            width={50}
+            height={0}
+            alt=""
+            className={`${
+              activeGallery === "design" ? "opacity-30" : "opacity-100"
+            }`}
+          />
+        </button>
+        <button onClick={() => setActiveGallery("design")}>
+          <Image
+            src="/svgs/design.svg"
+            width={100}
+            height={0}
+            alt=""
+            className={`${
+              activeGallery === "design" ? "opacity-100" : "opacity-30"
+            }`}
+          />
+        </button>
+      </div>
+
+      {/* gallery */}
       <div className="flex items-center justify-center">
-        <div className="w-2/3">
+        <div className="w-3/4 md:w-2/3">
           {activeGallery === "art" ? <ArtGallery /> : <DesignGallery />}
         </div>
       </div>
+      
+      {/* DESKTOP */}
       <div
-        className={`fixed bottom-10 w-full flex justify-between px-20 transition-opacity duration-500 ${
+        className={`invisible md:visible fixed bottom-10 w-full flex justify-between px-20 transition-opacity duration-500 ${
           hideSwitcher ? "opacity-0 pointer-events-none" : "opacity-100"
         }`}
       >

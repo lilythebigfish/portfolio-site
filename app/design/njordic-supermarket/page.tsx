@@ -2,8 +2,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { Header, Body } from "@/app/project-components";
-import { ProjectLanding, Project } from "@/app/project-components";
+import { Header, Body, Subheader } from "@/app/design/components/Typography";
+import { Article } from "../components/Article";
+import { ProjectLanding, Project } from "../components/ProjectLanding";
+import { PageNav } from "../components/PageNav";
 
 const ProjectPage = () => {
     const [project] = useState<Project>({
@@ -25,48 +27,44 @@ const ProjectPage = () => {
     });
 
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="min-h-screen">
             {/* Landing Page Section */}
             <ProjectLanding project={project} />
 
             {/* Article Section */}
-            <article className="flex-grow mx-72 pt-24">
+            <Article>
                 <Header title="Context" />
-                <div className="grid grid-cols-3 gap-32">
-                    <div className="col-start-1 col-span-2">
-                        <Body
-                            content="In January 2023, Irma, the staple supermarket in Denmark, announced that it would close all its stores. For centuries, the Danes treasured the Irma girl and the supermarket's design initiatives, but its sales was eventually was outcompeted by new discount markets. In order to fill in the gap Irma left, we were to design a new brand that solves a modern Danish supermarket problem."
-                        />
-                    </div>
-                    <div className="col-start-3 col-span-1">
-                        <Image
-                            src="/design/njordic-irma.jpeg"
-                            layout="responsive"
-                            width={0}
-                            height={0}
-                            alt="irma"
-                            className=""
-                        />
-                    </div>
+                <div className="col-start-1 col-span-2">
+                    <Body
+                        content="In January 2023, Irma, the staple supermarket in Denmark, announced that it would close all its stores. For centuries, the Danes treasured the Irma girl and the supermarket's design initiatives, but its sales was eventually was outcompeted by new discount markets. In order to fill in the gap Irma left, we were to design a new brand that solves a modern Danish supermarket problem."
+                    />
+                </div>
+                <div className="col-start-3 col-span-1">
+                    <Image
+                        src="/design/njordic-irma.jpeg"
+                        layout="responsive"
+                        width={0}
+                        height={0}
+                        alt="irma"
+                        className=""
+                    />
                 </div>
 
                 <Header title="Identifying the Problem + Solution" />
-                <div className="grid grid-cols-3 gap-32">
-                    <div className="col-start-1 col-span-1">
-                        <Body
-                            content="After conducting research to understand grocery shoppers' pain points, I realized the complaints fell into three main baskets: visual overstimulation, decision paralysis, and supermarket anxiety. After distilling the causation relationship among them, I identified the precise design problem and the key ideas for a solution."
-                        />
-                    </div>
-                    <div className="col-start-2 col-span-2">
-                        <Image
-                            src="/design/njordic-problem.png"
-                            layout="responsive"
-                            width={0}
-                            height={0}
-                            alt="irma"
-                            className=""
-                        />
-                    </div>
+                <div className="col-start-1 col-span-1">
+                    <Body
+                        content="After conducting research to understand grocery shoppers' pain points, I realized the complaints fell into three main baskets: visual overstimulation, decision paralysis, and supermarket anxiety. After distilling the causation relationship among them, I identified the precise design problem and the key ideas for a solution."
+                    />
+                </div>
+                <div className="col-start-2 col-span-2">
+                    <Image
+                        src="/design/njordic-problem.png"
+                        layout="responsive"
+                        width={0}
+                        height={0}
+                        alt="irma"
+                        className=""
+                    />
                 </div>
 
                 <Header title="Identity Statement" />
@@ -77,7 +75,7 @@ const ProjectPage = () => {
                     width={800}
                     height={500}
                     alt="Article Image"
-                    className="px-32"
+                    className="md:px-32 col-span-full"
                 />
 
                 <Header title="Final Brand Design" />
@@ -88,16 +86,16 @@ const ProjectPage = () => {
                     width={800}
                     height={500}
                     alt="Article Image"
-                    className="my-8"
+                    className="my-8 md:px-32 col-span-full"
                 />
-                
+
                 <Image
                     src="/design/njordic-style.png"
                     layout="responsive"
                     width={800}
                     height={500}
                     alt="Article Image"
-                    className="my-8"
+                    className="my-8 md:px-32 col-span-full"
                 />
 
                 <Header title="Deliverables" />
@@ -107,7 +105,7 @@ const ProjectPage = () => {
                     width={800}
                     height={500}
                     alt="Posters"
-                    className="my-8"
+                    className="md:px-32 my-8 col-span-full"
                 />
 
                 <Image
@@ -116,7 +114,7 @@ const ProjectPage = () => {
                     width={800}
                     height={500}
                     alt="Products"
-                    className="my-8"
+                    className="my-8 col-span-full"
                 />
 
                 <Image
@@ -125,7 +123,7 @@ const ProjectPage = () => {
                     width={800}
                     height={500}
                     alt="Website"
-                    className="my-8"
+                    className="my-8 col-span-full"
                 />
 
                 <Image
@@ -134,22 +132,13 @@ const ProjectPage = () => {
                     width={800}
                     height={500}
                     alt="Shopping bag"
-                    className="my-8"
+                    className="my-8 col-span-full"
                 />
 
-            </article>
+            </Article>
 
             {/* Navigation Section */}
-            <div className="flex flex-row justify-center space-x-24 mx-20 mt-36 mb-16">
-                <Link href="/design/wet-and-orange">
-                    <Image
-                        src="/svgs/next.svg"
-                        width={80}
-                        height={60}
-                        alt="Next Icon"
-                    />
-                </Link>
-            </div>
+            <PageNav next = "/design/wet-and-orange" />
         </div>
     );
 };
