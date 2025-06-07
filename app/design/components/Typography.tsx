@@ -2,7 +2,7 @@
 import { ReactNode } from "react";
 
 export function Header({ title }: { title: ReactNode }) {
-  return <h1 className="text-3xl pt-12 pb-8 font-medium col-span-full">{title}</h1>;
+  return <h1 className="text-xl md:text-3xl pt-8 md:pt-12 pb-4 md:pb-8 font-medium col-span-full">{title}</h1>;
 }
 
 export function Subheader({ title }: { title: ReactNode }) {
@@ -10,5 +10,5 @@ export function Subheader({ title }: { title: ReactNode }) {
 }
 
 export function Body({ content }: { content: ReactNode }) {
-  return <p className="text-md pb-4"> {content}</p>;
+  return <p className="md:pb-4"> {content}</p>;
 }

@@ -66,7 +66,7 @@ export function projectDetails(project: Project) {
         {project.client && (
           <h2 className="md:text-lg">{project.client || "Unknown Client"}</h2>
         )}
-        <h1 className="text-2xl md:text-5xl font-bold leading-snug">
+        <h1 className="text-2xl md:text-4xl font-bold leading-snug">
           {project.title || "Untitled Project"}
         </h1>
         <p className="pt-4 md:pt-8">

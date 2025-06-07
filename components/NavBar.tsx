@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <div className="fixed top-0 left-0 right-0 flex justify-between items-center w-full px-8 md:px-20 md:px-20 py-8 md:py-10 bg-white z-50">
+    <div className="fixed top-0 flex justify-between items-center w-full px-8 md:px-20 py-6 md:py-10 bg-white z-50">
       <a href={"/"}>
-        <Image src="/svgs/lilylin.svg" width={100} height={0} alt="" />
+        <Image src="/svgs/lilylin.svg" width={100} height={30} alt="" />
       </a>
       <div className="flex space-x-10 uppercase">
         <Link href={"https://medium.com/@lilylinthoughts"} target="_blank">

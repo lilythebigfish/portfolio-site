@@ -48,11 +48,11 @@ const ProjectPage = () => {
             width={0}
             height={0}
             alt="book"
-            className="mt-4 mb-8"
+            className="mt-4"
           />
         </div>
+        <Header title="Layout Planning" />
         <div className="col-start-1 col-span-1">
-          <Header title="Layout Planning" />
           <Body
             content="I decided to structure my photo book by matching pairs of photos with visual similarities, ordering them from most apparent connection to most discreet.
                 I also inserted full-spread images if a photos had an interesting texture I wanted to highlight. To experiment with book and image size in real form, I created 5 different dummies before settling on my final product."
@@ -65,7 +65,7 @@ const ProjectPage = () => {
             width={0}
             height={0}
             alt="book"
-            className="mt-12"
+            className=""
           />
         </div>
 
@@ -75,7 +75,7 @@ const ProjectPage = () => {
           width={0}
           height={0}
           alt="Book dummies"
-          className="mt-16 mb-8 col-span-full"
+          className="mt-4 col-span-full"
         />
 
         {/* image of dummies */}
@@ -95,7 +95,7 @@ const ProjectPage = () => {
             width={0}
             height={0}
             alt="Book Inner Cover"
-            className="my-8"
+            className="mt-8"
           />
         </div>
 
@@ -112,7 +112,7 @@ const ProjectPage = () => {
             width={0}
             height={0}
             alt="Book Cover"
-            className="my-8"
+            className="mt-8"
           />
         </div>
 
@@ -158,7 +158,7 @@ const ProjectPage = () => {
       </Article>
 
       <PageNav prev="/design/njordic-supermarket" next="/design/janice" />
-      
+
     </div>
   );
 };
