@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import { Header, Body, Subheader } from "@/app/design/components/Typography";
 import { Article } from "../components/Article";

@@ -1,9 +1,8 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import Carousel from "@/components/Carousel";
-import { Header, Body, Subheader } from "@/app/design/components/Typography";
+import { Header, Body } from "@/app/design/components/Typography";
 import { Article } from "../components/Article";
 import { ProjectLanding, Project } from "../components/ProjectLanding";
 import { PageNav } from "../components/PageNav";
