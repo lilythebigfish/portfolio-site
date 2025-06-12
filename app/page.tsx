@@ -120,7 +120,7 @@ export default function Home() {
       <Blurb />
     </div>
     {/* Gallery */}
-    <div className="min-h-screen snap-start" id="gallery-section">
+    <div className="min-h-screen" id="gallery-section">
       <div className="flex flex-col">
         <Gallery hideSwitcher={hideSwitcher} />
         <Footer />

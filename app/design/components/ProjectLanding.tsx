@@ -19,6 +19,7 @@ export interface Project {
 export function ProjectLanding({ project }: { project: Project }) {
   return (
     <div>
+      {/* desktop */}
       <div className="hidden md:flex h-screen mx-20 pt-36 pb-10 flex-row justify-between items-start ">
         {projectDetails(project)}
         {/* Image */}
@@ -31,9 +32,9 @@ export function ProjectLanding({ project }: { project: Project }) {
             alt="Book Cover"
           />
         </div>
-
+      {/* mobile */}
       </div>
-      <div className="md:hidden h-screen flex flex-col pt-20">
+      <div className="md:hidden flex flex-col pt-20">
         {/* Image */}
         <div className="w-full bg-slate-100">
           <Image
