@@ -29,19 +29,19 @@ export default function Blurb() {
   };
 
   return (
-    <div className="flex flex-col justify-between h-screen pt-30 pb-10">
+    <div className="flex flex-col justify-between h-screen mt-30 pb-10">
       <div className="flex-grow flex flex-col items-center justify-center mt-20">
         <Image
           src={"/art/Homepage.gif"}
           width={350}
           height={300}
           alt="Homepage"
-          className="mx-auto w-6xl h-6xl"
+          className="mx-auto"
         />
       </div>
 
       <div className="-tracking-tighter">
-        <p className="text-2xl md:text-3xl ">
+        <p className="text-2xl md:text-2xl ">
           <strong>
             VISUAL DESIGNER AND ARTIST BASED IN NEW HAVEN AND BEIJING.
           </strong>{" "}
