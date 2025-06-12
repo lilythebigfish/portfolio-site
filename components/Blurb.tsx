@@ -29,19 +29,26 @@ export default function Blurb() {
   };
 
   return (
-    <div className="flex flex-col justify-between h-screen mt-30 pb-10">
+    <div id="blurb-section" className="flex flex-col justify-between h-screen mt-30 mx-8 sm:mx-10 md:mx-20">
       <div className="flex-grow flex flex-col items-center justify-center mt-20">
         <Image
           src={"/art/Homepage.gif"}
-          width={350}
+          width={400}
           height={300}
           alt="Homepage"
-          className="mx-auto"
+          className="hidden md:flex"
+        />
+        <Image
+          src={"/art/Homepage.gif"}
+          width={300}
+          height={300}
+          alt="Homepage"
+          className="md:hidden"
         />
       </div>
 
-      <div className="-tracking-tighter">
-        <p className="text-2xl md:text-2xl ">
+      <div className="-tracking-tighter pb-4 md:pb-10">
+        <p className="text-xl sm:text-3xl ">
           <strong>
             VISUAL DESIGNER AND ARTIST BASED IN NEW HAVEN AND BEIJING.
           </strong>{" "}

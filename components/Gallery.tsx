@@ -231,10 +231,9 @@ export default function Gallery({ hideSwitcher }: { hideSwitcher: boolean }) {
 
 
   return (
-    <div className="pb-10 pt-24 ">  
-
+    <div className="pb-10 mt-16 md:mt-24 ">  
         {/* mobile gallery switcher */}
-        <div className={`md:hidden w-full flex justify-between px-14 py-8 z-50 `}>
+        <div className={`md:hidden w-full flex justify-between px-14 py-6 z-50 `}>
         <button onClick={() => setActiveGallery("art")}>
           <Image
             src="/svgs/art.svg"
@@ -266,7 +265,7 @@ export default function Gallery({ hideSwitcher }: { hideSwitcher: boolean }) {
         </div>
       </div>
       
-      {/* DESKTOP */}
+      {/* DESKTOP switcher */}
       <div
         className={`invisible md:visible fixed bottom-10 w-full flex justify-between px-20 transition-opacity duration-500 ${
           hideSwitcher ? "opacity-0 pointer-events-none" : "opacity-100"

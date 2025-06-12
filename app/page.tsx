@@ -91,27 +91,22 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
-      {/* <MobileBlocker /> */}
-      <div className="h-screen overflow-y-auto snap-y snap-mandatory scroll-smooth hide-scrollbar">
-        <div className="h-screen snap-start">
-          <Landing />
-        </div>
-        <div className="min-h-screen snap-start">
-          <div id="gallery-section" className="max-h-screen overflow-y-auto hide-scrollbar">
-            <Gallery hideSwitcher={hideSwitcher} />
-          </div>
-          <Footer />
-        </div>
-      </div>
-    </>
-  );
-}
-
-function Landing() {
-  return (
-    <div id="blurb-section" className="mx-10 sm:mx-16 md:mx-20">
+  <Navbar />
+  <div className="h-screen overflow-y-auto snap-y snap-mandatory scroll-smooth hide-scrollbar">
+    
+    {/* Landing */}
+    <div className="h-screen snap-start">
       <Blurb />
     </div>
+    {/* Gallery */}
+    <div className="h-screen snap-start overflow-y-auto hide-scrollbar" id="gallery-section">
+      <div className="min-h-screen flex flex-col">
+        <Gallery hideSwitcher={hideSwitcher} />
+        <Footer />
+      </div>
+    </div>
+
+  </div>
+</>
   );
 }
