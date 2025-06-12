@@ -137,7 +137,7 @@ function ArtGallery() {
     <>
       {selectedArt && (
         <div
-          className="fixed inset-0 bg-white bg-opacity-95 z-50 flex items-center justify-center p-10"
+          className="fixed inset-0 bg-white bg-opacity-95 z-50 flex items-center justify-center p-2 md:p-10"
           onClick={() => setSelectedArt(null)} // clicking closes
         >
           <Image

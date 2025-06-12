@@ -99,21 +99,57 @@ const ProjectPage = () => {
 
                 <Header title="Deliverables" />
                 <Image
-                    src="/design/njordic-products.png"
+                    src="/design/njordic-product1.png"
                     layout="responsive"
                     width={800}
                     height={500}
                     alt="Posters"
-                    className="md:px-32 my-8 col-span-full"
+                    className="my-8 col-start-1 col-span-1"
                 />
 
+                <Image
+                    src="/design/njordic-product2.png"
+                    layout="responsive"
+                    width={800}
+                    height={500}
+                    alt="Posters"
+                    className="my-8 col-start-2 col-span-1"
+                />
+
+                <Image
+                    src="/design/njordic-product3.png"
+                    layout="responsive"
+                    width={800}
+                    height={500}
+                    alt="Posters"
+                    className="my-8 col-start-3 col-span-1"
+                />
+            
                 <Image
                     src="/design/njordic-posters.png"
                     layout="responsive"
                     width={800}
                     height={500}
                     alt="Products"
-                    className="my-8 col-span-full"
+                    className="hidden sm:flex my-8 col-span-full"
+                />
+
+                <Image
+                    src="/design/njordic-poster1.png"
+                    layout="responsive"
+                    width={800}
+                    height={500}
+                    alt="Products"
+                    className="sm:hidden my-8 col-span-full"
+                />
+
+                <Image
+                    src="/design/njordic-poster2.png"
+                    layout="responsive"
+                    width={800}
+                    height={500}
+                    alt="Products"
+                    className="sm:hidden my-8 col-span-full"
                 />
 
                 <Image
