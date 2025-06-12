@@ -116,7 +116,7 @@ export default function Home() {
   <div className="h-screen overflow-y-auto snap-mandatory snap-y scroll-smooth overscroll-contain">
     
     {/* Landing */}
-    <div className="h-screen snap-start">
+    <div className="h-screen snap-end">
       <Blurb />
     </div>
     {/* Gallery */}
@@ -125,7 +125,7 @@ export default function Home() {
         <Gallery hideSwitcher={hideSwitcher} />
         <Footer />
       </div>
-      <div className="h-1 snap-start"></div>
+      <div className="h-1 snap-end"></div>
     </div>
 
   </div>
