@@ -125,6 +125,7 @@ export default function Home() {
         <Gallery hideSwitcher={hideSwitcher} />
         <Footer />
       </div>
+      <div className="h-1 snap-start"></div>
     </div>
 
   </div>
