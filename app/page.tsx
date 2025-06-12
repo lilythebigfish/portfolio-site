@@ -113,15 +113,15 @@ export default function Home() {
     return (
     <>
   <Navbar />
-  <div className="h-screen overflow-y-auto snap-proximity snap-y scroll-smooth overscroll-contain">
+  <div className="h-screen overflow-y-auto snap-mandatory snap-y scroll-smooth overscroll-contain">
     
     {/* Landing */}
     <div className="h-screen snap-start">
       <Blurb />
     </div>
     {/* Gallery */}
-    <div className="min-h-screen snap-start" id="gallery-section">
-      <div className="flex flex-col">
+    <div className="min-h-screen snap-start flex flex-col" id="gallery-section">
+      <div className="flex-1 overflow-y-auto">
         <Gallery hideSwitcher={hideSwitcher} />
         <Footer />
       </div>
