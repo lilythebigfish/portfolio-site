@@ -29,8 +29,8 @@ export default function Blurb() {
   };
 
   return (
-    <div id="blurb-section" className="flex flex-col justify-between h-screen mt-30 mx-8 sm:mx-10 md:mx-20">
-      <div className="flex-grow flex flex-col items-center justify-center mt-20">
+    <div id="blurb-section" className="flex flex-col justify-between h-screen pt-30 mx-8 sm:mx-10 md:mx-20">
+      <div className="flex-grow flex flex-col items-center justify-center pt-20">
         <Image
           src={"/art/Homepage.gif"}
           width={400}
@@ -59,7 +59,7 @@ export default function Blurb() {
               width={90}
               height={0}
               alt=""
-              className="inline-block align-middle mx-2 md:mx-3 -mt-[3px] md:w-24 sm:w-20 animate-bounce"
+              className="inline-block align-middle mx-2 md:mx-3 -pt-[3px] md:w-24 sm:w-20 animate-bounce"
             />
           </span>
           to solve other people&apos;s problems and make
@@ -69,7 +69,7 @@ export default function Blurb() {
               width={50}
               height={0}
               alt=""
-              className="inline-block align-middle mx-2 md:mx-3 -mt-[3px] md:w-14 sm:w-10 animate-bounce"
+              className="inline-block align-middle mx-2 md:mx-3 -pt-[3px] md:w-14 sm:w-10 animate-bounce"
             />
           </span>
           to solve my own problems.

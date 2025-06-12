@@ -8,7 +8,7 @@ type PageNavProps = {
 
 export function PageNav({ prev, next }: PageNavProps) {
     return (
-        <div className="flex flex-row justify-center space-x-24 mx-20 mt-16 md:mt-32 mb-8 md:mb-16">
+        <div className="flex flex-row justify-center space-x-24 mx-20 pt-16 md:pt-32 pb-8 md:pb-16">
             {prev && (
                 <Link href={prev}>
                     <Image
