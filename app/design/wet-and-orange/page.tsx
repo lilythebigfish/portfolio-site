@@ -64,7 +64,7 @@ const ProjectPage = () => {
             width={0}
             height={0}
             alt="book"
-            className=""
+            className="mt-4"
           />
         </div>
 
@@ -125,9 +125,8 @@ const ProjectPage = () => {
             objectFit="cover"
             objectPosition="center"
             alt="Book Cover"
+            className="mb-8"
           />
-
-          <Body content="" />
 
           <Image
             src="/design/book_p1.jpg"
@@ -137,8 +136,8 @@ const ProjectPage = () => {
             objectFit="cover"
             objectPosition="center"
             alt="Book Cover"
+            className="mb-8"
           />
-          <Body content="" />
 
           <Carousel
             images={[

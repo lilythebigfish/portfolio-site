@@ -56,7 +56,7 @@ const ProjectPage = () => {
             width={0}
             height={0}
             alt="demo"
-            className="pt-28"
+            className="pt-4 sm:pt-28"
           />
         </div>
 
