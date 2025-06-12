@@ -98,7 +98,7 @@ export default function Home() {
           <Landing />
         </div>
         <div className="min-h-screen snap-start">
-          <div id="gallery-section" className="h-full overflow-y-auto hide-scrollbar">
+          <div id="gallery-section" className="max-h-screen overflow-y-auto hide-scrollbar">
             <Gallery hideSwitcher={hideSwitcher} />
           </div>
           <Footer />
