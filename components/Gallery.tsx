@@ -231,7 +231,7 @@ export default function Gallery({ hideSwitcher }: { hideSwitcher: boolean }) {
 
 
   return (
-    <div className="pb-10 pt-24">  
+    <div className="pb-10 pt-24 ">  
 
         {/* mobile gallery switcher */}
         <div className={`md:hidden w-full flex justify-between px-14 py-8 z-50 `}>

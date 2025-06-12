@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Blurb() {
   const handleDesignClick = () => {
     // Get gallery element
-    const galleryElement = document.querySelector(".snap-start.snap-always");
+    const galleryElement = document.querySelector("#gallery-section");
 
     // Set active gallery to design before scrolling
     if (window.__nextGalleryComponent?.setActiveGallery) {
@@ -22,7 +22,7 @@ export default function Blurb() {
       window.__nextGalleryComponent.setActiveGallery("art");
     }
 
-    const galleryElement = document.querySelector(".snap-start.snap-always");
+    const galleryElement = document.querySelector("#gallery-section");
     if (galleryElement) {
       galleryElement.scrollIntoView({ behavior: "smooth" });
     }

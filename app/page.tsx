@@ -91,14 +91,14 @@ export default function Home() {
 
   return (
     <>
-      <Navbar/>
+      <Navbar />
       {/* <MobileBlocker /> */}
       <div className="h-screen overflow-y-auto snap-y snap-mandatory scroll-smooth hide-scrollbar">
         <div className="h-screen snap-start">
           <Landing />
         </div>
         <div className="min-h-screen snap-start">
-          <div className="h-full overflow-y-auto hide-scrollbar">
+          <div id="gallery-section" className="h-full overflow-y-auto hide-scrollbar">
             <Gallery hideSwitcher={hideSwitcher} />
           </div>
           <Footer />
