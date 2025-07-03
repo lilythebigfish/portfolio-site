@@ -18,4 +18,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Deploy on Vercel
 
-This project is deployed through Vercel. Deployments and analytics can be accessed directly on my Vercel dashboard. (https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
+This project is deployed through Vercel. Deployments and analytics can be accessed directly on my Vercel dashboard. https://vercel.com/
